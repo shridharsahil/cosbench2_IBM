@@ -1,0 +1,126 @@
+2016-07-28 09:28:54,700 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/j2ee_1_4.xsd
+2016-07-28 09:28:54,704 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/xml.xsd
+2016-07-28 09:28:54,704 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/jsp_2_0.xsd
+2016-07-28 09:28:54,705 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/jsp_2_1.xsd
+2016-07-28 09:28:54,705 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_1_1.dtd
+2016-07-28 09:28:54,705 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_1_2.dtd
+2016-07-28 09:28:54,706 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_2_0.xsd
+2016-07-28 09:28:54,706 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_2_1.xsd
+2016-07-28 09:28:54,706 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_2.dtd
+2016-07-28 09:28:54,707 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_3.dtd
+2016-07-28 09:28:54,707 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_4.xsd
+2016-07-28 09:28:54,708 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_5.xsd
+2016-07-28 09:28:54,708 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/j2ee_web_services_1_1.xsd
+2016-07-28 09:28:54,708 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/j2ee_web_services_client_1_1.xsd
+2016-07-28 09:28:54,900 [ERROR] [SpringOsgiExtenderThread-15] org.springframework.osgi.extender.internal.support.DefaultOsgiBundleApplicationContextListener - Application context refresh failed (OsgiBundleXmlApplicationContext(bundle=cosbench-librados, config=osgibundle:/META-INF/spring/*.xml))
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageFactory' defined in URL [bundleentry://75.fwk1330106945/META-INF/spring/plugin-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.intel.cosbench.api.librados.LibradosStorageFactory]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.intel.cosbench.api.storage cannot be resolved
+	StorageAPIFactory cannot be resolved to a type
+	The method getStorageName() of type LibradosStorageFactory must override or implement a supertype method
+	StorageAPI cannot be resolved to a type
+	The method getStorageAPI() of type LibradosStorageFactory must override or implement a supertype method
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:965)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:911)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.access$1600(AbstractDelegatedExecutionApplicationContext.java:62)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext$4.run(AbstractDelegatedExecutionApplicationContext.java:327)
+	at org.springframework.osgi.util.internal.PrivilegedUtils.executeWithCustomTCCL(PrivilegedUtils.java:87)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.completeRefresh(AbstractDelegatedExecutionApplicationContext.java:292)
+	at org.springframework.osgi.extender.internal.dependencies.startup.DependencyWaiterApplicationContextExecutor$CompleteRefreshTask.run(DependencyWaiterApplicationContextExecutor.java:138)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.intel.cosbench.api.librados.LibradosStorageFactory]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.intel.cosbench.api.storage cannot be resolved
+	StorageAPIFactory cannot be resolved to a type
+	The method getStorageName() of type LibradosStorageFactory must override or implement a supertype method
+	StorageAPI cannot be resolved to a type
+	The method getStorageAPI() of type LibradosStorageFactory must override or implement a supertype method
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:141)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:74)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:958)
+	... 15 more
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.intel.cosbench.api.storage cannot be resolved
+	StorageAPIFactory cannot be resolved to a type
+	The method getStorageName() of type LibradosStorageFactory must override or implement a supertype method
+	StorageAPI cannot be resolved to a type
+	The method getStorageAPI() of type LibradosStorageFactory must override or implement a supertype method
+
+	at com.intel.cosbench.api.librados.LibradosStorageFactory.<init>(LibradosStorageFactory.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:126)
+	... 17 more
+2016-07-28 09:28:54,902 [ERROR] [SpringOsgiExtenderThread-15] org.springframework.osgi.extender.internal.dependencies.startup.DependencyWaiterApplicationContextExecutor - Unable to create application context for [cosbench-librados], unsatisfied dependencies: none
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageFactory' defined in URL [bundleentry://75.fwk1330106945/META-INF/spring/plugin-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.intel.cosbench.api.librados.LibradosStorageFactory]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.intel.cosbench.api.storage cannot be resolved
+	StorageAPIFactory cannot be resolved to a type
+	The method getStorageName() of type LibradosStorageFactory must override or implement a supertype method
+	StorageAPI cannot be resolved to a type
+	The method getStorageAPI() of type LibradosStorageFactory must override or implement a supertype method
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:965)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:911)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.access$1600(AbstractDelegatedExecutionApplicationContext.java:62)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext$4.run(AbstractDelegatedExecutionApplicationContext.java:327)
+	at org.springframework.osgi.util.internal.PrivilegedUtils.executeWithCustomTCCL(PrivilegedUtils.java:87)
+	at org.springframework.osgi.context.support.AbstractDelegatedExecutionApplicationContext.completeRefresh(AbstractDelegatedExecutionApplicationContext.java:292)
+	at org.springframework.osgi.extender.internal.dependencies.startup.DependencyWaiterApplicationContextExecutor$CompleteRefreshTask.run(DependencyWaiterApplicationContextExecutor.java:138)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.intel.cosbench.api.librados.LibradosStorageFactory]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.intel.cosbench.api.storage cannot be resolved
+	StorageAPIFactory cannot be resolved to a type
+	The method getStorageName() of type LibradosStorageFactory must override or implement a supertype method
+	StorageAPI cannot be resolved to a type
+	The method getStorageAPI() of type LibradosStorageFactory must override or implement a supertype method
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:141)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:74)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:958)
+	... 15 more
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.intel.cosbench.api.storage cannot be resolved
+	StorageAPIFactory cannot be resolved to a type
+	The method getStorageName() of type LibradosStorageFactory must override or implement a supertype method
+	StorageAPI cannot be resolved to a type
+	The method getStorageAPI() of type LibradosStorageFactory must override or implement a supertype method
+
+	at com.intel.cosbench.api.librados.LibradosStorageFactory.<init>(LibradosStorageFactory.java:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:126)
+	... 17 more
+2016-07-28 09:28:56,143 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/j2ee_1_4.xsd
+2016-07-28 09:28:56,144 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/xml.xsd
+2016-07-28 09:28:56,144 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/jsp_2_0.xsd
+2016-07-28 09:28:56,145 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/jsp_2_1.xsd
+2016-07-28 09:28:56,145 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_1_1.dtd
+2016-07-28 09:28:56,145 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_1_2.dtd
+2016-07-28 09:28:56,145 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_2_0.xsd
+2016-07-28 09:28:56,145 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/jsp/resources/web-jsptaglibrary_2_1.xsd
+2016-07-28 09:28:56,145 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_2.dtd
+2016-07-28 09:28:56,146 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_3.dtd
+2016-07-28 09:28:56,146 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_4.xsd
+2016-07-28 09:28:56,146 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/web-app_2_5.xsd
+2016-07-28 09:28:56,146 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/j2ee_web_services_1_1.xsd
+2016-07-28 09:28:56,146 [WARN] [Timer-0] org.apache.catalina.startup.DigesterFactory - Could not get url for /javax/servlet/resources/j2ee_web_services_client_1_1.xsd

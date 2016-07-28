@@ -1,0 +1,37 @@
+2016-07-28 09:37:10,648 [INFO] [Log4jLogManager] - will append log to file /Users/sahilshridhar/Documents/cosbench_2/debug/log/mission/MD31F00D205.log
+2016-07-28 09:37:10,659 [INFO] [NoneStorage] - performing GET at /june1/sahil_10240kb_objects147
+2016-07-28 09:39:14,954 [ERROR] [AbstractOperator] - worker 1 fail to perform operation june1/sahil_10240kb_objects147
+com.intel.cosbench.api.storage.StorageException: com.amazonaws.AmazonClientException: Unable to execute HTTP request: Connect to june1.s3.sjc.objectstorage.uat.service.networklayer.com/june1.s3.sjc.objectstorage.uat.service.networklayer.com/10.1.129.32 timed out
+	at com.intel.cosbench.api.S3Stor.S3Storage.getObject(S3Storage.java:98)
+	at com.intel.cosbench.driver.operator.Reader.doRead(Reader.java:89)
+	at com.intel.cosbench.driver.operator.Reader.operate(Reader.java:69)
+	at com.intel.cosbench.driver.operator.AbstractOperator.operate(AbstractOperator.java:76)
+	at com.intel.cosbench.driver.agent.WorkAgent.performOperation(WorkAgent.java:197)
+	at com.intel.cosbench.driver.agent.WorkAgent.doWork(WorkAgent.java:177)
+	at com.intel.cosbench.driver.agent.WorkAgent.execute(WorkAgent.java:134)
+	at com.intel.cosbench.driver.agent.AbstractAgent.call(AbstractAgent.java:44)
+	at com.intel.cosbench.driver.agent.AbstractAgent.call(AbstractAgent.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.amazonaws.AmazonClientException: Unable to execute HTTP request: Connect to june1.s3.sjc.objectstorage.uat.service.networklayer.com/june1.s3.sjc.objectstorage.uat.service.networklayer.com/10.1.129.32 timed out
+	at com.amazonaws.http.AmazonHttpClient.executeHelper(AmazonHttpClient.java:354)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:190)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:2974)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:911)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:801)
+	at com.intel.cosbench.api.S3Stor.S3Storage.getObject(S3Storage.java:94)
+	... 12 more
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to june1.s3.sjc.objectstorage.uat.service.networklayer.com/june1.s3.sjc.objectstorage.uat.service.networklayer.com/10.1.129.32 timed out
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:125)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:148)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:149)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:561)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:415)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:732)
+	at com.amazonaws.http.AmazonHttpClient.executeHelper(AmazonHttpClient.java:306)
+	... 17 more

@@ -1,0 +1,4 @@
+================================================== stage: s1-main ==================================================
+---------------------------------- mission: MD31F00D205, driver: driver1 ----------------------------------
+2016-07-28 09:37:10,648 [INFO] [Log4jLogManager] - will append log to file /Users/sahilshridhar/Documents/cosbench_2/debug/log/mission/MD31F00D205.log
+2016-07-28 09:37:10,659 [INFO] [NoneStorage] - performing GET at /june1/sahil_10240kb_objects147

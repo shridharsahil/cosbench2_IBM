@@ -1,0 +1,25 @@
+# 7/28/16 9:20:17 AM CDT
+# Eclipse Compiler for Java(TM) v20160516-2131, 3.12.0, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-config/src/com/intel/cosbench/config/Workflow.java (at line 23)
+	import com.intel.cosbench.log.LogFactory;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.log.LogFactory is never used
+----------
+2. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-config/src/com/intel/cosbench/config/Workflow.java (at line 24)
+	import com.intel.cosbench.log.Logger;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.log.Logger is never used
+----------
+----------
+3. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-config/src/com/intel/cosbench/config/Workload.java (at line 23)
+	import com.intel.cosbench.log.LogFactory;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.log.LogFactory is never used
+----------
+4. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-config/src/com/intel/cosbench/config/Workload.java (at line 24)
+	import com.intel.cosbench.log.Logger;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.log.Logger is never used
+----------
+4 problems (4 warnings)

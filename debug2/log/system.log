@@ -1,0 +1,53 @@
+2016-07-28 09:28:55,187 [INFO] [Log4jLogManager] - will append log to file /Users/sahilshridhar/Documents/cosbench_2/debug/log/system.log
+2016-07-28 09:28:56,436 [INFO] [Log4jLogManager] - will append log to file /Users/sahilshridhar/Documents/cosbench_2/debug/log/system.log
+2016-07-28 09:28:56,448 [INFO] [SimpleWorkloadArchiver] - using /Users/sahilshridhar/Documents/cosbench_2/debug/archive for storing workload archives
+2016-07-28 09:28:56,448 [INFO] [SimpleWorkloadLoader] - loading workload archives from /Users/sahilshridhar/Documents/cosbench_2/debug/archive
+2016-07-28 09:28:56,450 [INFO] [SimpleWorkloadArchiver] - using /Users/sahilshridhar/Documents/cosbench_2/debug/archive for storing workload archives
+2016-07-28 09:28:56,450 [INFO] [SimpleWorkloadLoader] - loading workload archives from /Users/sahilshridhar/Documents/cosbench_2/debug/archive
+2016-07-28 09:31:50,077 [INFO] [WorkloadProcessor] - begin to process workload w1
+2016-07-28 09:31:50,078 [INFO] [WorkloadProcessor] - begin to run stage s1-main
+2016-07-28 09:31:50,078 [INFO] [WorkloadProcessor] - ============================================
+2016-07-28 09:31:50,078 [INFO] [WorkloadProcessor] - START WORK: main
+2016-07-28 09:31:50,341 [WARN] [PingHandler] - os type on driver N/A is mac os x!
+2016-07-28 09:31:50,376 [INFO] [AbstractCommandTasklet] - time drift between controller and driver-driver1 is 35 mSec
+2016-07-28 09:31:50,377 [INFO] [StageRunner] - successfully booted all tasks in stage s1-main
+2016-07-28 09:31:50,594 [INFO] [StageRunner] - successfully submitted all tasks in stage s1-main
+2016-07-28 09:31:50,601 [INFO] [MissionHandler] - mission ME31EB28DA7 has been authed successfully
+2016-07-28 09:31:50,602 [INFO] [StageRunner] - successfully authenticated all tasks in stage s1-main
+2016-07-28 09:31:50,810 [INFO] [StageRunner] - successfully launched all tasks in stage s1-main
+2016-07-28 09:33:15,608 [INFO] [MissionHandler] - wait 5 seconds for agents to abort ...
+2016-07-28 09:33:15,616 [INFO] [MissionHandler] - all agents have been aborted in mission ME31EB28DA7
+2016-07-28 09:33:15,616 [INFO] [MissionHandler] - mission ME31EB28DA7 appears to be aborted
+2016-07-28 09:37:10,269 [INFO] [WorkloadProcessor] - begin to cancel workload w1
+2016-07-28 09:37:10,269 [INFO] [StageRunner] - begin to cancel stage s1-main
+2016-07-28 09:37:10,278 [INFO] [MissionHandler] - mission ME31EB28DA7 has been aborted successfully
+2016-07-28 09:37:10,538 [INFO] [StageRunner] - stage s1-main has been cancelled
+2016-07-28 09:37:10,636 [INFO] [SimpleWorkloadArchiver] - workload w1 has been successfully archived
+2016-07-28 09:37:10,637 [INFO] [WorkloadProcessor] - successfully cancelled workload w1
+2016-07-28 09:37:10,637 [INFO] [WorkloadProcessor] - begin to process workload w3
+2016-07-28 09:37:10,638 [INFO] [WorkloadProcessor] - begin to run stage s1-main
+2016-07-28 09:37:10,638 [INFO] [WorkloadProcessor] - ============================================
+2016-07-28 09:37:10,638 [INFO] [WorkloadProcessor] - START WORK: main
+2016-07-28 09:37:10,641 [WARN] [PingHandler] - os type on driver N/A is mac os x!
+2016-07-28 09:37:10,643 [INFO] [AbstractCommandTasklet] - time drift between controller and driver-driver1 is 2 mSec
+2016-07-28 09:37:10,643 [INFO] [StageRunner] - successfully booted all tasks in stage s1-main
+2016-07-28 09:37:10,654 [INFO] [StageRunner] - successfully submitted all tasks in stage s1-main
+2016-07-28 09:37:10,656 [INFO] [MissionHandler] - mission MD31F00D205 has been authed successfully
+2016-07-28 09:37:10,657 [INFO] [StageRunner] - successfully authenticated all tasks in stage s1-main
+2016-07-28 09:37:10,865 [INFO] [StageRunner] - successfully launched all tasks in stage s1-main
+2016-07-28 09:39:12,170 [INFO] [WorkloadProcessor] - begin to cancel workload w3
+2016-07-28 09:39:12,170 [INFO] [StageRunner] - begin to cancel stage s1-main
+2016-07-28 09:39:12,381 [INFO] [StageRunner] - stage s1-main has been cancelled
+2016-07-28 09:39:12,396 [INFO] [SimpleWorkloadArchiver] - workload w3 has been successfully archived
+2016-07-28 09:39:12,396 [INFO] [WorkloadProcessor] - successfully cancelled workload w3
+2016-07-28 09:39:12,408 [INFO] [WorkloadProcessor] - begin to process workload w4
+2016-07-28 09:39:12,409 [INFO] [WorkloadProcessor] - begin to run stage s1-main
+2016-07-28 09:39:12,409 [INFO] [WorkloadProcessor] - ============================================
+2016-07-28 09:39:12,409 [INFO] [WorkloadProcessor] - START WORK: main
+2016-07-28 09:39:12,416 [WARN] [PingHandler] - os type on driver N/A is mac os x!
+2016-07-28 09:39:12,417 [INFO] [AbstractCommandTasklet] - time drift between controller and driver-driver1 is 1 mSec
+2016-07-28 09:39:12,418 [INFO] [StageRunner] - successfully booted all tasks in stage s1-main
+2016-07-28 09:39:12,431 [INFO] [StageRunner] - successfully submitted all tasks in stage s1-main
+2016-07-28 09:39:12,434 [INFO] [MissionHandler] - mission M631F1E9734 has been authed successfully
+2016-07-28 09:39:12,435 [INFO] [StageRunner] - successfully authenticated all tasks in stage s1-main
+2016-07-28 09:39:12,640 [INFO] [StageRunner] - successfully launched all tasks in stage s1-main

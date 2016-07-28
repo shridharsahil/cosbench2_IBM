@@ -1,0 +1,2002 @@
+================================================== stage: s1-main ==================================================
+---------------------------------- mission: ME31EB28DA7, driver: driver1 ----------------------------------
+2016-07-28 09:31:50,418 [INFO] [Log4jLogManager] - will append log to file /Users/sahilshridhar/Documents/cosbench_2/debug/log/mission/ME31EB28DA7.log
+2016-07-28 09:31:50,611 [INFO] [NoneStorage] - performing GET at /s3container5/s3object68
+2016-07-28 09:31:50,610 [WARN] [AbstractOperator] - listerrr: s3container2/s3object40
+2016-07-28 09:31:50,610 [WARN] [AbstractOperator] - listerrr: s3container1/s3object63
+2016-07-28 09:31:50,612 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object63
+2016-07-28 09:31:50,610 [INFO] [NoneStorage] - performing GET at /s3container2/s3object42
+2016-07-28 09:31:50,610 [WARN] [AbstractOperator] - listerrr: s3container3/s3object38
+2016-07-28 09:31:50,610 [WARN] [AbstractOperator] - listerrr: s3container4/s3object87
+2016-07-28 09:31:50,611 [INFO] [NoneStorage] - performing GET at /s3container4/s3object37
+2016-07-28 09:31:50,611 [WARN] [AbstractOperator] - listerrr: s3container5/s3object70
+2016-07-28 09:31:50,611 [INFO] [NoneStorage] - performing GET at /s3container1/s3object1
+2016-07-28 09:31:50,611 [INFO] [NoneStorage] - performing GET at /s3container3/s3object56
+2016-07-28 09:31:50,614 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object70
+2016-07-28 09:31:50,613 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object87
+2016-07-28 09:31:50,613 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object38
+2016-07-28 09:31:50,612 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object40
+2016-07-28 09:31:50,617 [WARN] [AbstractOperator] - listerrr: s3container6/s3object21
+2016-07-28 09:31:50,617 [INFO] [NoneStorage] - performing GET at /s3container8/s3object36
+2016-07-28 09:31:50,617 [INFO] [NoneStorage] - performing GET at /s3container7/s3object25
+2016-07-28 09:31:50,617 [WARN] [AbstractOperator] - listerrr: s3container7/s3object78
+2016-07-28 09:31:50,618 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object78
+2016-07-28 09:31:50,617 [INFO] [NoneStorage] - performing GET at /s3container6/s3object38
+2016-07-28 09:31:50,618 [WARN] [AbstractOperator] - listerrr: s3container8/s3object93
+2016-07-28 09:31:50,617 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object21
+2016-07-28 09:31:50,619 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object93
+2016-07-28 09:31:50,619 [WARN] [AbstractOperator] - listerrr: s3container9/s3object4
+2016-07-28 09:31:50,619 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object4
+2016-07-28 09:31:50,619 [WARN] [AbstractOperator] - listerrr: s3container10/s3object10
+2016-07-28 09:31:50,619 [WARN] [AbstractOperator] - listerrr: s3container1/s3object96
+2016-07-28 09:31:50,619 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object96
+2016-07-28 09:31:50,620 [INFO] [NoneStorage] - performing GET at /s3container9/s3object61
+2016-07-28 09:31:50,619 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object10
+2016-07-28 09:31:50,620 [INFO] [NoneStorage] - performing GET at /s3container10/s3object97
+2016-07-28 09:31:50,949 [ERROR] [AbstractOperator] - worker 7 fail to perform operation s3container5/s3object68
+com.intel.cosbench.api.storage.StorageException: com.amazonaws.AmazonClientException: Unable to unmarshall response (null)
+	at com.intel.cosbench.api.S3Stor.S3Storage.getObject(S3Storage.java:98)
+	at com.intel.cosbench.driver.operator.Reader.doRead(Reader.java:89)
+	at com.intel.cosbench.driver.operator.Reader.operate(Reader.java:69)
+	at com.intel.cosbench.driver.operator.AbstractOperator.operate(AbstractOperator.java:76)
+	at com.intel.cosbench.driver.agent.WorkAgent.performOperation(WorkAgent.java:197)
+	at com.intel.cosbench.driver.agent.WorkAgent.doWork(WorkAgent.java:177)
+	at com.intel.cosbench.driver.agent.WorkAgent.execute(WorkAgent.java:134)
+	at com.intel.cosbench.driver.agent.AbstractAgent.call(AbstractAgent.java:44)
+	at com.intel.cosbench.driver.agent.AbstractAgent.call(AbstractAgent.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.amazonaws.AmazonClientException: Unable to unmarshall response (null)
+	at com.amazonaws.http.AmazonHttpClient.handleResponse(AmazonHttpClient.java:585)
+	at com.amazonaws.http.AmazonHttpClient.executeHelper(AmazonHttpClient.java:319)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:190)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:2974)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:911)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:801)
+	at com.intel.cosbench.api.S3Stor.S3Storage.getObject(S3Storage.java:94)
+	... 12 more
+Caused by: java.lang.NullPointerException
+	at com.amazonaws.services.s3.internal.ServiceUtils.isMultipartUploadETag(ServiceUtils.java:81)
+	at com.amazonaws.services.s3.internal.S3ObjectResponseHandler.handle(S3ObjectResponseHandler.java:48)
+	at com.amazonaws.services.s3.internal.S3ObjectResponseHandler.handle(S3ObjectResponseHandler.java:30)
+	at com.amazonaws.http.AmazonHttpClient.handleResponse(AmazonHttpClient.java:562)
+	... 18 more
+2016-07-28 09:31:50,950 [WARN] [AbstractOperator] - listerrr: s3container2/s3object17
+2016-07-28 09:31:50,950 [WARN] [AbstractOperator] - listerrr: s3container5/s3object50
+2016-07-28 09:31:50,950 [WARN] [AbstractOperator] - listerrr: s3container4/s3object82
+2016-07-28 09:31:50,950 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object82
+2016-07-28 09:31:50,950 [WARN] [AbstractOperator] - listerrr: s3container3/s3object12
+2016-07-28 09:31:50,951 [INFO] [NoneStorage] - performing GET at /s3container1/s3object12
+2016-07-28 09:31:50,950 [WARN] [AbstractOperator] - listerrr: s3container7/s3object63
+2016-07-28 09:31:50,951 [INFO] [NoneStorage] - performing GET at /s3container2/s3object97
+2016-07-28 09:31:50,950 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object50
+2016-07-28 09:31:50,951 [WARN] [AbstractOperator] - listerrr: s3container9/s3object38
+2016-07-28 09:31:50,951 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object38
+2016-07-28 09:31:50,952 [WARN] [AbstractOperator] - listerrr: s3container1/s3object80
+2016-07-28 09:31:50,950 [WARN] [AbstractOperator] - listerrr: s3container6/s3object71
+2016-07-28 09:31:50,950 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object17
+2016-07-28 09:31:50,952 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object71
+2016-07-28 09:31:50,952 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object80
+2016-07-28 09:31:50,952 [WARN] [AbstractOperator] - listerrr: s3container2/s3object69
+2016-07-28 09:31:50,951 [WARN] [AbstractOperator] - listerrr: s3container10/s3object24
+2016-07-28 09:31:50,951 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object63
+2016-07-28 09:31:50,951 [WARN] [AbstractOperator] - listerrr: s3container8/s3object100
+2016-07-28 09:31:50,951 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object12
+2016-07-28 09:31:50,953 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object100
+2016-07-28 09:31:50,953 [INFO] [NoneStorage] - performing GET at /s3container5/s3object95
+2016-07-28 09:31:50,953 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object24
+2016-07-28 09:31:50,953 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object69
+2016-07-28 09:31:50,952 [INFO] [NoneStorage] - performing GET at /s3container4/s3object61
+2016-07-28 09:31:50,952 [WARN] [AbstractOperator] - listerrr: s3container3/s3object26
+2016-07-28 09:31:50,952 [INFO] [NoneStorage] - performing GET at /s3container3/s3object78
+2016-07-28 09:31:50,954 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object26
+2016-07-28 09:31:50,954 [WARN] [AbstractOperator] - listerrr: s3container5/s3object11
+2016-07-28 09:31:50,953 [INFO] [NoneStorage] - performing GET at /s3container7/s3object5
+2016-07-28 09:31:50,953 [WARN] [AbstractOperator] - listerrr: s3container4/s3object74
+2016-07-28 09:31:50,953 [INFO] [NoneStorage] - performing GET at /s3container6/s3object59
+2016-07-28 09:31:50,955 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object74
+2016-07-28 09:31:50,954 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object11
+2016-07-28 09:31:50,954 [WARN] [AbstractOperator] - listerrr: s3container6/s3object1
+2016-07-28 09:31:50,955 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object1
+2016-07-28 09:31:50,955 [INFO] [NoneStorage] - performing GET at /s3container8/s3object98
+2016-07-28 09:31:50,955 [WARN] [AbstractOperator] - listerrr: s3container7/s3object63
+2016-07-28 09:31:50,955 [INFO] [NoneStorage] - performing GET at /s3container9/s3object29
+2016-07-28 09:31:50,956 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object63
+2016-07-28 09:31:50,956 [WARN] [AbstractOperator] - listerrr: s3container8/s3object91
+2016-07-28 09:31:50,956 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object91
+2016-07-28 09:31:50,956 [INFO] [NoneStorage] - performing GET at /s3container10/s3object49
+2016-07-28 09:31:51,147 [INFO] [NoneStorage] - performing GET at /s3container1/s3object26
+2016-07-28 09:31:51,148 [WARN] [AbstractOperator] - listerrr: s3container9/s3object19
+2016-07-28 09:31:51,148 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object19
+2016-07-28 09:31:51,148 [WARN] [AbstractOperator] - listerrr: s3container10/s3object6
+2016-07-28 09:31:51,149 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object6
+2016-07-28 09:31:51,149 [WARN] [AbstractOperator] - listerrr: s3container1/s3object83
+2016-07-28 09:31:51,149 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object83
+2016-07-28 09:31:51,149 [INFO] [NoneStorage] - performing GET at /s3container2/s3object13
+2016-07-28 09:31:51,163 [WARN] [AbstractOperator] - listerrr: s3container2/s3object16
+2016-07-28 09:31:51,163 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object16
+2016-07-28 09:31:51,163 [WARN] [AbstractOperator] - listerrr: s3container3/s3object93
+2016-07-28 09:31:51,163 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object93
+2016-07-28 09:31:51,163 [INFO] [NoneStorage] - performing GET at /s3container3/s3object63
+2016-07-28 09:31:51,163 [INFO] [NoneStorage] - performing GET at /s3container4/s3object90
+2016-07-28 09:31:51,171 [INFO] [NoneStorage] - performing GET at /s3container5/s3object69
+2016-07-28 09:31:51,171 [WARN] [AbstractOperator] - listerrr: s3container4/s3object55
+2016-07-28 09:31:51,171 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object55
+2016-07-28 09:31:51,171 [WARN] [AbstractOperator] - listerrr: s3container5/s3object9
+2016-07-28 09:31:51,171 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object9
+2016-07-28 09:31:51,172 [WARN] [AbstractOperator] - listerrr: s3container6/s3object26
+2016-07-28 09:31:51,172 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object26
+2016-07-28 09:31:51,172 [WARN] [AbstractOperator] - listerrr: s3container7/s3object74
+2016-07-28 09:31:51,172 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object74
+2016-07-28 09:31:51,172 [WARN] [AbstractOperator] - listerrr: s3container8/s3object27
+2016-07-28 09:31:51,172 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object27
+2016-07-28 09:31:51,172 [INFO] [NoneStorage] - performing GET at /s3container6/s3object1
+2016-07-28 09:31:51,173 [INFO] [NoneStorage] - performing GET at /s3container7/s3object20
+2016-07-28 09:31:51,174 [WARN] [AbstractOperator] - listerrr: s3container9/s3object53
+2016-07-28 09:31:51,174 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object53
+2016-07-28 09:31:51,175 [INFO] [NoneStorage] - performing GET at /s3container8/s3object13
+2016-07-28 09:31:51,176 [INFO] [NoneStorage] - performing GET at /s3container9/s3object23
+2016-07-28 09:31:51,177 [WARN] [AbstractOperator] - listerrr: s3container10/s3object87
+2016-07-28 09:31:51,177 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object87
+2016-07-28 09:31:51,177 [WARN] [AbstractOperator] - listerrr: s3container1/s3object79
+2016-07-28 09:31:51,177 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object79
+2016-07-28 09:31:51,177 [WARN] [AbstractOperator] - listerrr: s3container2/s3object22
+2016-07-28 09:31:51,178 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object22
+2016-07-28 09:31:51,178 [WARN] [AbstractOperator] - listerrr: s3container3/s3object68
+2016-07-28 09:31:51,178 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object68
+2016-07-28 09:31:51,178 [INFO] [NoneStorage] - performing GET at /s3container10/s3object77
+2016-07-28 09:31:51,350 [WARN] [AbstractOperator] - listerrr: s3container4/s3object4
+2016-07-28 09:31:51,350 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object4
+2016-07-28 09:31:51,350 [WARN] [AbstractOperator] - listerrr: s3container5/s3object86
+2016-07-28 09:31:51,350 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object86
+2016-07-28 09:31:51,350 [INFO] [NoneStorage] - performing GET at /s3container1/s3object51
+2016-07-28 09:31:51,351 [INFO] [NoneStorage] - performing GET at /s3container2/s3object7
+2016-07-28 09:31:51,366 [WARN] [AbstractOperator] - listerrr: s3container6/s3object44
+2016-07-28 09:31:51,366 [INFO] [NoneStorage] - performing GET at /s3container3/s3object100
+2016-07-28 09:31:51,366 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object44
+2016-07-28 09:31:51,366 [INFO] [NoneStorage] - performing GET at /s3container4/s3object22
+2016-07-28 09:31:51,428 [WARN] [AbstractOperator] - listerrr: s3container7/s3object69
+2016-07-28 09:31:51,428 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object69
+2016-07-28 09:31:51,429 [INFO] [NoneStorage] - performing GET at /s3container5/s3object63
+2016-07-28 09:31:51,437 [INFO] [NoneStorage] - performing GET at /s3container6/s3object21
+2016-07-28 09:31:51,438 [INFO] [NoneStorage] - performing GET at /s3container7/s3object2
+2016-07-28 09:31:51,457 [WARN] [AbstractOperator] - listerrr: s3container8/s3object60
+2016-07-28 09:31:51,457 [INFO] [NoneStorage] - performing GET at /s3container8/s3object29
+2016-07-28 09:31:51,458 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object60
+2016-07-28 09:31:51,458 [INFO] [NoneStorage] - performing GET at /s3container9/s3object94
+2016-07-28 09:31:51,458 [WARN] [AbstractOperator] - listerrr: s3container9/s3object90
+2016-07-28 09:31:51,458 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object90
+2016-07-28 09:31:51,458 [INFO] [NoneStorage] - performing GET at /s3container10/s3object78
+2016-07-28 09:31:51,573 [INFO] [NoneStorage] - performing GET at /s3container1/s3object73
+2016-07-28 09:31:51,574 [WARN] [AbstractOperator] - listerrr: s3container10/s3object11
+2016-07-28 09:31:51,574 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object11
+2016-07-28 09:31:51,574 [INFO] [NoneStorage] - performing GET at /s3container2/s3object74
+2016-07-28 09:31:51,575 [INFO] [NoneStorage] - performing GET at /s3container3/s3object51
+2016-07-28 09:31:51,576 [WARN] [AbstractOperator] - listerrr: s3container1/s3object24
+2016-07-28 09:31:51,576 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object24
+2016-07-28 09:31:51,577 [INFO] [NoneStorage] - performing GET at /s3container4/s3object93
+2016-07-28 09:31:51,618 [WARN] [AbstractOperator] - listerrr: s3container2/s3object83
+2016-07-28 09:31:51,619 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object83
+2016-07-28 09:31:51,619 [INFO] [NoneStorage] - performing GET at /s3container5/s3object6
+2016-07-28 09:31:51,630 [WARN] [AbstractOperator] - listerrr: s3container3/s3object72
+2016-07-28 09:31:51,630 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object72
+2016-07-28 09:31:51,630 [WARN] [AbstractOperator] - listerrr: s3container4/s3object91
+2016-07-28 09:31:51,630 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object91
+2016-07-28 09:31:51,631 [WARN] [AbstractOperator] - listerrr: s3container5/s3object14
+2016-07-28 09:31:51,631 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object14
+2016-07-28 09:31:51,631 [INFO] [NoneStorage] - performing GET at /s3container6/s3object25
+2016-07-28 09:31:51,649 [WARN] [AbstractOperator] - listerrr: s3container6/s3object60
+2016-07-28 09:31:51,649 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object60
+2016-07-28 09:31:51,649 [INFO] [NoneStorage] - performing GET at /s3container7/s3object63
+2016-07-28 09:31:51,649 [INFO] [NoneStorage] - performing GET at /s3container8/s3object36
+2016-07-28 09:31:51,661 [WARN] [AbstractOperator] - listerrr: s3container7/s3object90
+2016-07-28 09:31:51,661 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object90
+2016-07-28 09:31:51,661 [INFO] [NoneStorage] - performing GET at /s3container9/s3object91
+2016-07-28 09:31:51,679 [WARN] [AbstractOperator] - listerrr: s3container8/s3object99
+2016-07-28 09:31:51,679 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object99
+2016-07-28 09:31:51,680 [INFO] [NoneStorage] - performing GET at /s3container10/s3object95
+2016-07-28 09:31:51,765 [WARN] [AbstractOperator] - listerrr: s3container9/s3object65
+2016-07-28 09:31:51,765 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object65
+2016-07-28 09:31:51,765 [INFO] [NoneStorage] - performing GET at /s3container1/s3object66
+2016-07-28 09:31:51,766 [WARN] [AbstractOperator] - listerrr: s3container10/s3object62
+2016-07-28 09:31:51,766 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object62
+2016-07-28 09:31:51,766 [WARN] [AbstractOperator] - listerrr: s3container1/s3object62
+2016-07-28 09:31:51,766 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object62
+2016-07-28 09:31:51,767 [WARN] [AbstractOperator] - listerrr: s3container2/s3object32
+2016-07-28 09:31:51,767 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object32
+2016-07-28 09:31:51,767 [WARN] [AbstractOperator] - listerrr: s3container3/s3object35
+2016-07-28 09:31:51,767 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object35
+2016-07-28 09:31:51,767 [INFO] [NoneStorage] - performing GET at /s3container2/s3object83
+2016-07-28 09:31:51,796 [INFO] [NoneStorage] - performing GET at /s3container3/s3object70
+2016-07-28 09:31:51,798 [WARN] [AbstractOperator] - listerrr: s3container4/s3object45
+2016-07-28 09:31:51,798 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object45
+2016-07-28 09:31:51,798 [WARN] [AbstractOperator] - listerrr: s3container5/s3object82
+2016-07-28 09:31:51,798 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object82
+2016-07-28 09:31:51,799 [WARN] [AbstractOperator] - listerrr: s3container6/s3object20
+2016-07-28 09:31:51,799 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object20
+2016-07-28 09:31:51,799 [INFO] [NoneStorage] - performing GET at /s3container4/s3object94
+2016-07-28 09:31:51,833 [WARN] [AbstractOperator] - listerrr: s3container7/s3object91
+2016-07-28 09:31:51,833 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object91
+2016-07-28 09:31:51,834 [INFO] [NoneStorage] - performing GET at /s3container5/s3object71
+2016-07-28 09:31:51,854 [WARN] [AbstractOperator] - listerrr: s3container8/s3object3
+2016-07-28 09:31:51,854 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object3
+2016-07-28 09:31:51,855 [INFO] [NoneStorage] - performing GET at /s3container6/s3object96
+2016-07-28 09:31:51,870 [WARN] [AbstractOperator] - listerrr: s3container9/s3object3
+2016-07-28 09:31:51,871 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object3
+2016-07-28 09:31:51,871 [INFO] [NoneStorage] - performing GET at /s3container7/s3object66
+2016-07-28 09:31:51,871 [WARN] [AbstractOperator] - listerrr: s3container10/s3object81
+2016-07-28 09:31:51,871 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object81
+2016-07-28 09:31:51,872 [WARN] [AbstractOperator] - listerrr: s3container1/s3object9
+2016-07-28 09:31:51,872 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object9
+2016-07-28 09:31:51,872 [WARN] [AbstractOperator] - listerrr: s3container2/s3object57
+2016-07-28 09:31:51,872 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object57
+2016-07-28 09:31:51,872 [WARN] [AbstractOperator] - listerrr: s3container3/s3object31
+2016-07-28 09:31:51,872 [INFO] [NoneStorage] - performing GET at /s3container8/s3object2
+2016-07-28 09:31:51,872 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object31
+2016-07-28 09:31:51,873 [INFO] [NoneStorage] - performing GET at /s3container9/s3object34
+2016-07-28 09:31:51,882 [INFO] [NoneStorage] - performing GET at /s3container10/s3object56
+2016-07-28 09:31:51,963 [WARN] [AbstractOperator] - listerrr: s3container4/s3object95
+2016-07-28 09:31:51,963 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object95
+2016-07-28 09:31:51,964 [WARN] [AbstractOperator] - listerrr: s3container5/s3object95
+2016-07-28 09:31:51,964 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object95
+2016-07-28 09:31:51,964 [INFO] [NoneStorage] - performing GET at /s3container1/s3object5
+2016-07-28 09:31:51,988 [WARN] [AbstractOperator] - listerrr: s3container6/s3object43
+2016-07-28 09:31:51,989 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object43
+2016-07-28 09:31:51,989 [WARN] [AbstractOperator] - listerrr: s3container7/s3object83
+2016-07-28 09:31:51,989 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object83
+2016-07-28 09:31:51,989 [WARN] [AbstractOperator] - listerrr: s3container8/s3object95
+2016-07-28 09:31:51,989 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object95
+2016-07-28 09:31:51,989 [WARN] [AbstractOperator] - listerrr: s3container9/s3object82
+2016-07-28 09:31:51,989 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object82
+2016-07-28 09:31:51,989 [INFO] [NoneStorage] - performing GET at /s3container2/s3object43
+2016-07-28 09:31:52,010 [INFO] [NoneStorage] - performing GET at /s3container3/s3object89
+2016-07-28 09:31:52,021 [INFO] [NoneStorage] - performing GET at /s3container4/s3object7
+2016-07-28 09:31:52,045 [INFO] [NoneStorage] - performing GET at /s3container5/s3object59
+2016-07-28 09:31:52,060 [INFO] [NoneStorage] - performing GET at /s3container6/s3object4
+2016-07-28 09:31:52,061 [WARN] [AbstractOperator] - listerrr: s3container10/s3object65
+2016-07-28 09:31:52,062 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object65
+2016-07-28 09:31:52,062 [WARN] [AbstractOperator] - listerrr: s3container1/s3object62
+2016-07-28 09:31:52,062 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object62
+2016-07-28 09:31:52,062 [INFO] [NoneStorage] - performing GET at /s3container7/s3object79
+2016-07-28 09:31:52,066 [INFO] [NoneStorage] - performing GET at /s3container8/s3object3
+2016-07-28 09:31:52,071 [WARN] [AbstractOperator] - listerrr: s3container2/s3object11
+2016-07-28 09:31:52,071 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object11
+2016-07-28 09:31:52,071 [INFO] [NoneStorage] - performing GET at /s3container9/s3object71
+2016-07-28 09:31:52,104 [WARN] [AbstractOperator] - listerrr: s3container3/s3object97
+2016-07-28 09:31:52,104 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object97
+2016-07-28 09:31:52,105 [WARN] [AbstractOperator] - listerrr: s3container4/s3object38
+2016-07-28 09:31:52,105 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object38
+2016-07-28 09:31:52,105 [WARN] [AbstractOperator] - listerrr: s3container5/s3object1
+2016-07-28 09:31:52,105 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object1
+2016-07-28 09:31:52,105 [WARN] [AbstractOperator] - listerrr: s3container6/s3object56
+2016-07-28 09:31:52,105 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object56
+2016-07-28 09:31:52,105 [INFO] [NoneStorage] - performing GET at /s3container10/s3object5
+2016-07-28 09:31:52,183 [INFO] [NoneStorage] - performing GET at /s3container1/s3object75
+2016-07-28 09:31:52,187 [WARN] [AbstractOperator] - listerrr: s3container7/s3object32
+2016-07-28 09:31:52,188 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object32
+2016-07-28 09:31:52,188 [WARN] [AbstractOperator] - listerrr: s3container8/s3object11
+2016-07-28 09:31:52,188 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object11
+2016-07-28 09:31:52,188 [INFO] [NoneStorage] - performing GET at /s3container2/s3object94
+2016-07-28 09:31:52,199 [INFO] [NoneStorage] - performing GET at /s3container3/s3object87
+2016-07-28 09:31:52,209 [INFO] [NoneStorage] - performing GET at /s3container4/s3object61
+2016-07-28 09:31:52,233 [WARN] [AbstractOperator] - listerrr: s3container9/s3object74
+2016-07-28 09:31:52,233 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object74
+2016-07-28 09:31:52,234 [WARN] [AbstractOperator] - listerrr: s3container10/s3object9
+2016-07-28 09:31:52,234 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object9
+2016-07-28 09:31:52,234 [WARN] [AbstractOperator] - listerrr: s3container1/s3object45
+2016-07-28 09:31:52,234 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object45
+2016-07-28 09:31:52,234 [WARN] [AbstractOperator] - listerrr: s3container2/s3object56
+2016-07-28 09:31:52,234 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object56
+2016-07-28 09:31:52,234 [WARN] [AbstractOperator] - listerrr: s3container3/s3object43
+2016-07-28 09:31:52,234 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object43
+2016-07-28 09:31:52,234 [WARN] [AbstractOperator] - listerrr: s3container4/s3object96
+2016-07-28 09:31:52,234 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object96
+2016-07-28 09:31:52,234 [WARN] [AbstractOperator] - listerrr: s3container5/s3object66
+2016-07-28 09:31:52,234 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object66
+2016-07-28 09:31:52,234 [INFO] [NoneStorage] - performing GET at /s3container5/s3object16
+2016-07-28 09:31:52,255 [INFO] [NoneStorage] - performing GET at /s3container6/s3object52
+2016-07-28 09:31:52,260 [WARN] [AbstractOperator] - listerrr: s3container6/s3object79
+2016-07-28 09:31:52,260 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object79
+2016-07-28 09:31:52,260 [WARN] [AbstractOperator] - listerrr: s3container7/s3object29
+2016-07-28 09:31:52,261 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object29
+2016-07-28 09:31:52,260 [INFO] [NoneStorage] - performing GET at /s3container7/s3object81
+2016-07-28 09:31:52,261 [INFO] [NoneStorage] - performing GET at /s3container8/s3object99
+2016-07-28 09:31:52,264 [WARN] [AbstractOperator] - listerrr: s3container8/s3object84
+2016-07-28 09:31:52,264 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object84
+2016-07-28 09:31:52,264 [WARN] [AbstractOperator] - listerrr: s3container9/s3object53
+2016-07-28 09:31:52,264 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object53
+2016-07-28 09:31:52,264 [WARN] [AbstractOperator] - listerrr: s3container10/s3object36
+2016-07-28 09:31:52,264 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object36
+2016-07-28 09:31:52,264 [INFO] [NoneStorage] - performing GET at /s3container9/s3object64
+2016-07-28 09:31:52,325 [WARN] [AbstractOperator] - listerrr: s3container1/s3object37
+2016-07-28 09:31:52,325 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object37
+2016-07-28 09:31:52,326 [WARN] [AbstractOperator] - listerrr: s3container2/s3object46
+2016-07-28 09:31:52,326 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object46
+2016-07-28 09:31:52,326 [WARN] [AbstractOperator] - listerrr: s3container3/s3object31
+2016-07-28 09:31:52,326 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object31
+2016-07-28 09:31:52,326 [INFO] [NoneStorage] - performing GET at /s3container10/s3object59
+2016-07-28 09:31:52,399 [WARN] [AbstractOperator] - listerrr: s3container4/s3object18
+2016-07-28 09:31:52,399 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object18
+2016-07-28 09:31:52,399 [WARN] [AbstractOperator] - listerrr: s3container5/s3object7
+2016-07-28 09:31:52,399 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object7
+2016-07-28 09:31:52,399 [WARN] [AbstractOperator] - listerrr: s3container6/s3object24
+2016-07-28 09:31:52,400 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object24
+2016-07-28 09:31:52,400 [WARN] [AbstractOperator] - listerrr: s3container7/s3object63
+2016-07-28 09:31:52,400 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object63
+2016-07-28 09:31:52,400 [INFO] [NoneStorage] - performing GET at /s3container1/s3object78
+2016-07-28 09:31:52,404 [WARN] [AbstractOperator] - listerrr: s3container8/s3object99
+2016-07-28 09:31:52,404 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object99
+2016-07-28 09:31:52,404 [INFO] [NoneStorage] - performing GET at /s3container2/s3object88
+2016-07-28 09:31:52,409 [INFO] [NoneStorage] - performing GET at /s3container3/s3object32
+2016-07-28 09:31:52,419 [WARN] [AbstractOperator] - listerrr: s3container9/s3object24
+2016-07-28 09:31:52,419 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object24
+2016-07-28 09:31:52,419 [INFO] [NoneStorage] - performing GET at /s3container4/s3object69
+2016-07-28 09:31:52,427 [WARN] [AbstractOperator] - listerrr: s3container10/s3object83
+2016-07-28 09:31:52,427 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object83
+2016-07-28 09:31:52,427 [INFO] [NoneStorage] - performing GET at /s3container5/s3object73
+2016-07-28 09:31:52,476 [INFO] [NoneStorage] - performing GET at /s3container6/s3object15
+2016-07-28 09:31:52,477 [INFO] [NoneStorage] - performing GET at /s3container7/s3object73
+2016-07-28 09:31:52,479 [WARN] [AbstractOperator] - listerrr: s3container1/s3object17
+2016-07-28 09:31:52,479 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object17
+2016-07-28 09:31:52,479 [WARN] [AbstractOperator] - listerrr: s3container2/s3object12
+2016-07-28 09:31:52,479 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object12
+2016-07-28 09:31:52,479 [WARN] [AbstractOperator] - listerrr: s3container3/s3object33
+2016-07-28 09:31:52,479 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object33
+2016-07-28 09:31:52,479 [WARN] [AbstractOperator] - listerrr: s3container4/s3object72
+2016-07-28 09:31:52,479 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object72
+2016-07-28 09:31:52,479 [WARN] [AbstractOperator] - listerrr: s3container5/s3object80
+2016-07-28 09:31:52,480 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object80
+2016-07-28 09:31:52,480 [WARN] [AbstractOperator] - listerrr: s3container6/s3object36
+2016-07-28 09:31:52,480 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object36
+2016-07-28 09:31:52,480 [INFO] [NoneStorage] - performing GET at /s3container8/s3object81
+2016-07-28 09:31:52,482 [WARN] [AbstractOperator] - listerrr: s3container7/s3object15
+2016-07-28 09:31:52,482 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object15
+2016-07-28 09:31:52,482 [WARN] [AbstractOperator] - listerrr: s3container8/s3object95
+2016-07-28 09:31:52,482 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object95
+2016-07-28 09:31:52,482 [WARN] [AbstractOperator] - listerrr: s3container9/s3object64
+2016-07-28 09:31:52,483 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object64
+2016-07-28 09:31:52,483 [INFO] [NoneStorage] - performing GET at /s3container9/s3object48
+2016-07-28 09:31:52,517 [INFO] [NoneStorage] - performing GET at /s3container10/s3object39
+2016-07-28 09:31:52,590 [INFO] [NoneStorage] - performing GET at /s3container1/s3object6
+2016-07-28 09:31:52,628 [INFO] [NoneStorage] - performing GET at /s3container2/s3object66
+2016-07-28 09:31:52,631 [WARN] [AbstractOperator] - listerrr: s3container10/s3object5
+2016-07-28 09:31:52,631 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object5
+2016-07-28 09:31:52,631 [INFO] [NoneStorage] - performing GET at /s3container3/s3object86
+2016-07-28 09:31:52,632 [WARN] [AbstractOperator] - listerrr: s3container1/s3object50
+2016-07-28 09:31:52,632 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object50
+2016-07-28 09:31:52,632 [INFO] [NoneStorage] - performing GET at /s3container4/s3object59
+2016-07-28 09:31:52,638 [INFO] [NoneStorage] - performing GET at /s3container5/s3object11
+2016-07-28 09:31:52,675 [WARN] [AbstractOperator] - listerrr: s3container2/s3object15
+2016-07-28 09:31:52,676 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object15
+2016-07-28 09:31:52,676 [WARN] [AbstractOperator] - listerrr: s3container3/s3object13
+2016-07-28 09:31:52,676 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object13
+2016-07-28 09:31:52,676 [INFO] [NoneStorage] - performing GET at /s3container6/s3object100
+2016-07-28 09:31:52,680 [INFO] [NoneStorage] - performing GET at /s3container7/s3object9
+2016-07-28 09:31:52,711 [WARN] [AbstractOperator] - listerrr: s3container4/s3object46
+2016-07-28 09:31:52,711 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object46
+2016-07-28 09:31:52,711 [WARN] [AbstractOperator] - listerrr: s3container5/s3object84
+2016-07-28 09:31:52,711 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object84
+2016-07-28 09:31:52,711 [WARN] [AbstractOperator] - listerrr: s3container6/s3object14
+2016-07-28 09:31:52,711 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object14
+2016-07-28 09:31:52,711 [WARN] [AbstractOperator] - listerrr: s3container7/s3object83
+2016-07-28 09:31:52,711 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object83
+2016-07-28 09:31:52,711 [WARN] [AbstractOperator] - listerrr: s3container8/s3object2
+2016-07-28 09:31:52,711 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object2
+2016-07-28 09:31:52,712 [INFO] [NoneStorage] - performing GET at /s3container8/s3object65
+2016-07-28 09:31:52,712 [WARN] [AbstractOperator] - listerrr: s3container9/s3object61
+2016-07-28 09:31:52,712 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object61
+2016-07-28 09:31:52,712 [WARN] [AbstractOperator] - listerrr: s3container10/s3object19
+2016-07-28 09:31:52,712 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object19
+2016-07-28 09:31:52,712 [WARN] [AbstractOperator] - listerrr: s3container1/s3object23
+2016-07-28 09:31:52,712 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object23
+2016-07-28 09:31:52,712 [WARN] [AbstractOperator] - listerrr: s3container2/s3object29
+2016-07-28 09:31:52,712 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object29
+2016-07-28 09:31:52,712 [WARN] [AbstractOperator] - listerrr: s3container3/s3object97
+2016-07-28 09:31:52,712 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object97
+2016-07-28 09:31:52,712 [WARN] [AbstractOperator] - listerrr: s3container4/s3object44
+2016-07-28 09:31:52,712 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object44
+2016-07-28 09:31:52,712 [WARN] [AbstractOperator] - listerrr: s3container5/s3object25
+2016-07-28 09:31:52,713 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object25
+2016-07-28 09:31:52,713 [INFO] [NoneStorage] - performing GET at /s3container9/s3object31
+2016-07-28 09:31:52,760 [INFO] [NoneStorage] - performing GET at /s3container10/s3object67
+2016-07-28 09:31:52,817 [WARN] [AbstractOperator] - listerrr: s3container6/s3object64
+2016-07-28 09:31:52,817 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object64
+2016-07-28 09:31:52,817 [WARN] [AbstractOperator] - listerrr: s3container7/s3object51
+2016-07-28 09:31:52,818 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object51
+2016-07-28 09:31:52,818 [WARN] [AbstractOperator] - listerrr: s3container8/s3object95
+2016-07-28 09:31:52,818 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object95
+2016-07-28 09:31:52,818 [WARN] [AbstractOperator] - listerrr: s3container9/s3object13
+2016-07-28 09:31:52,818 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object13
+2016-07-28 09:31:52,818 [WARN] [AbstractOperator] - listerrr: s3container10/s3object80
+2016-07-28 09:31:52,818 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object80
+2016-07-28 09:31:52,818 [INFO] [NoneStorage] - performing GET at /s3container1/s3object41
+2016-07-28 09:31:52,819 [WARN] [AbstractOperator] - listerrr: s3container1/s3object65
+2016-07-28 09:31:52,819 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object65
+2016-07-28 09:31:52,819 [WARN] [AbstractOperator] - listerrr: s3container2/s3object32
+2016-07-28 09:31:52,819 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object32
+2016-07-28 09:31:52,820 [INFO] [NoneStorage] - performing GET at /s3container2/s3object33
+2016-07-28 09:31:52,832 [WARN] [AbstractOperator] - listerrr: s3container3/s3object34
+2016-07-28 09:31:52,832 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object34
+2016-07-28 09:31:52,832 [WARN] [AbstractOperator] - listerrr: s3container4/s3object7
+2016-07-28 09:31:52,833 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object7
+2016-07-28 09:31:52,833 [WARN] [AbstractOperator] - listerrr: s3container5/s3object8
+2016-07-28 09:31:52,833 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object8
+2016-07-28 09:31:52,833 [INFO] [NoneStorage] - performing GET at /s3container3/s3object33
+2016-07-28 09:31:52,835 [WARN] [AbstractOperator] - listerrr: s3container6/s3object60
+2016-07-28 09:31:52,835 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object60
+2016-07-28 09:31:52,835 [INFO] [NoneStorage] - performing GET at /s3container4/s3object48
+2016-07-28 09:31:52,839 [INFO] [NoneStorage] - performing GET at /s3container5/s3object90
+2016-07-28 09:31:52,897 [WARN] [AbstractOperator] - listerrr: s3container7/s3object87
+2016-07-28 09:31:52,898 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object87
+2016-07-28 09:31:52,898 [INFO] [NoneStorage] - performing GET at /s3container6/s3object100
+2016-07-28 09:31:52,900 [WARN] [AbstractOperator] - listerrr: s3container8/s3object33
+2016-07-28 09:31:52,901 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object33
+2016-07-28 09:31:52,901 [WARN] [AbstractOperator] - listerrr: s3container9/s3object18
+2016-07-28 09:31:52,901 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object18
+2016-07-28 09:31:52,901 [INFO] [NoneStorage] - performing GET at /s3container7/s3object100
+2016-07-28 09:31:52,901 [INFO] [NoneStorage] - performing GET at /s3container8/s3object42
+2016-07-28 09:31:52,902 [WARN] [AbstractOperator] - listerrr: s3container10/s3object71
+2016-07-28 09:31:52,902 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object71
+2016-07-28 09:31:52,902 [WARN] [AbstractOperator] - listerrr: s3container1/s3object17
+2016-07-28 09:31:52,902 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object17
+2016-07-28 09:31:52,902 [INFO] [NoneStorage] - performing GET at /s3container9/s3object86
+2016-07-28 09:31:52,962 [WARN] [AbstractOperator] - listerrr: s3container2/s3object5
+2016-07-28 09:31:52,962 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object5
+2016-07-28 09:31:52,962 [WARN] [AbstractOperator] - listerrr: s3container3/s3object57
+2016-07-28 09:31:52,963 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object57
+2016-07-28 09:31:52,963 [INFO] [NoneStorage] - performing GET at /s3container10/s3object81
+2016-07-28 09:31:53,010 [INFO] [NoneStorage] - performing GET at /s3container1/s3object33
+2016-07-28 09:31:53,019 [WARN] [AbstractOperator] - listerrr: s3container4/s3object50
+2016-07-28 09:31:53,020 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object50
+2016-07-28 09:31:53,020 [INFO] [NoneStorage] - performing GET at /s3container2/s3object72
+2016-07-28 09:31:53,023 [WARN] [AbstractOperator] - listerrr: s3container5/s3object8
+2016-07-28 09:31:53,023 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object8
+2016-07-28 09:31:53,023 [WARN] [AbstractOperator] - listerrr: s3container6/s3object3
+2016-07-28 09:31:53,023 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object3
+2016-07-28 09:31:53,023 [WARN] [AbstractOperator] - listerrr: s3container7/s3object15
+2016-07-28 09:31:53,023 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object15
+2016-07-28 09:31:53,023 [WARN] [AbstractOperator] - listerrr: s3container8/s3object65
+2016-07-28 09:31:53,024 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object65
+2016-07-28 09:31:53,024 [WARN] [AbstractOperator] - listerrr: s3container9/s3object98
+2016-07-28 09:31:53,024 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object98
+2016-07-28 09:31:53,024 [WARN] [AbstractOperator] - listerrr: s3container10/s3object95
+2016-07-28 09:31:53,024 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object95
+2016-07-28 09:31:53,024 [INFO] [NoneStorage] - performing GET at /s3container3/s3object22
+2016-07-28 09:31:53,044 [INFO] [NoneStorage] - performing GET at /s3container4/s3object34
+2016-07-28 09:31:53,053 [INFO] [NoneStorage] - performing GET at /s3container5/s3object41
+2016-07-28 09:31:53,092 [WARN] [AbstractOperator] - listerrr: s3container1/s3object23
+2016-07-28 09:31:53,092 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object23
+2016-07-28 09:31:53,092 [INFO] [NoneStorage] - performing GET at /s3container6/s3object69
+2016-07-28 09:31:53,092 [INFO] [NoneStorage] - performing GET at /s3container7/s3object93
+2016-07-28 09:31:53,120 [WARN] [AbstractOperator] - listerrr: s3container2/s3object82
+2016-07-28 09:31:53,121 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object82
+2016-07-28 09:31:53,121 [WARN] [AbstractOperator] - listerrr: s3container3/s3object42
+2016-07-28 09:31:53,121 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object42
+2016-07-28 09:31:53,121 [WARN] [AbstractOperator] - listerrr: s3container4/s3object66
+2016-07-28 09:31:53,121 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object66
+2016-07-28 09:31:53,121 [INFO] [NoneStorage] - performing GET at /s3container8/s3object49
+2016-07-28 09:31:53,121 [INFO] [NoneStorage] - performing GET at /s3container9/s3object5
+2016-07-28 09:31:53,187 [INFO] [NoneStorage] - performing GET at /s3container10/s3object1
+2016-07-28 09:31:53,232 [INFO] [NoneStorage] - performing GET at /s3container1/s3object80
+2016-07-28 09:31:53,241 [INFO] [NoneStorage] - performing GET at /s3container2/s3object46
+2016-07-28 09:31:53,245 [WARN] [AbstractOperator] - listerrr: s3container5/s3object37
+2016-07-28 09:31:53,245 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object37
+2016-07-28 09:31:53,245 [WARN] [AbstractOperator] - listerrr: s3container6/s3object2
+2016-07-28 09:31:53,245 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object2
+2016-07-28 09:31:53,245 [WARN] [AbstractOperator] - listerrr: s3container7/s3object8
+2016-07-28 09:31:53,246 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object8
+2016-07-28 09:31:53,246 [WARN] [AbstractOperator] - listerrr: s3container8/s3object100
+2016-07-28 09:31:53,246 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object100
+2016-07-28 09:31:53,246 [INFO] [NoneStorage] - performing GET at /s3container3/s3object30
+2016-07-28 09:31:53,254 [INFO] [NoneStorage] - performing GET at /s3container4/s3object90
+2016-07-28 09:31:53,262 [WARN] [AbstractOperator] - listerrr: s3container9/s3object19
+2016-07-28 09:31:53,263 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object19
+2016-07-28 09:31:53,263 [WARN] [AbstractOperator] - listerrr: s3container10/s3object39
+2016-07-28 09:31:53,263 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object39
+2016-07-28 09:31:53,263 [INFO] [NoneStorage] - performing GET at /s3container5/s3object43
+2016-07-28 09:31:53,314 [WARN] [AbstractOperator] - listerrr: s3container1/s3object77
+2016-07-28 09:31:53,314 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object77
+2016-07-28 09:31:53,314 [WARN] [AbstractOperator] - listerrr: s3container2/s3object59
+2016-07-28 09:31:53,314 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object59
+2016-07-28 09:31:53,314 [WARN] [AbstractOperator] - listerrr: s3container3/s3object79
+2016-07-28 09:31:53,314 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object79
+2016-07-28 09:31:53,314 [INFO] [NoneStorage] - performing GET at /s3container6/s3object66
+2016-07-28 09:31:53,315 [WARN] [AbstractOperator] - listerrr: s3container4/s3object73
+2016-07-28 09:31:53,315 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object73
+2016-07-28 09:31:53,315 [WARN] [AbstractOperator] - listerrr: s3container5/s3object32
+2016-07-28 09:31:53,315 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object32
+2016-07-28 09:31:53,315 [WARN] [AbstractOperator] - listerrr: s3container6/s3object55
+2016-07-28 09:31:53,315 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object55
+2016-07-28 09:31:53,315 [INFO] [NoneStorage] - performing GET at /s3container7/s3object9
+2016-07-28 09:31:53,316 [WARN] [AbstractOperator] - listerrr: s3container7/s3object33
+2016-07-28 09:31:53,316 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object33
+2016-07-28 09:31:53,316 [INFO] [NoneStorage] - performing GET at /s3container8/s3object11
+2016-07-28 09:31:53,316 [INFO] [NoneStorage] - performing GET at /s3container9/s3object27
+2016-07-28 09:31:53,408 [INFO] [NoneStorage] - performing GET at /s3container10/s3object78
+2016-07-28 09:31:53,431 [WARN] [AbstractOperator] - listerrr: s3container8/s3object42
+2016-07-28 09:31:53,431 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object42
+2016-07-28 09:31:53,431 [WARN] [AbstractOperator] - listerrr: s3container9/s3object93
+2016-07-28 09:31:53,431 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object93
+2016-07-28 09:31:53,431 [WARN] [AbstractOperator] - listerrr: s3container10/s3object19
+2016-07-28 09:31:53,431 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object19
+2016-07-28 09:31:53,431 [INFO] [NoneStorage] - performing GET at /s3container1/s3object98
+2016-07-28 09:31:53,434 [INFO] [NoneStorage] - performing GET at /s3container2/s3object61
+2016-07-28 09:31:53,452 [INFO] [NoneStorage] - performing GET at /s3container3/s3object68
+2016-07-28 09:31:53,453 [INFO] [NoneStorage] - performing GET at /s3container4/s3object29
+2016-07-28 09:31:53,464 [WARN] [AbstractOperator] - listerrr: s3container1/s3object19
+2016-07-28 09:31:53,464 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object19
+2016-07-28 09:31:53,464 [WARN] [AbstractOperator] - listerrr: s3container2/s3object42
+2016-07-28 09:31:53,464 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object42
+2016-07-28 09:31:53,464 [INFO] [NoneStorage] - performing GET at /s3container5/s3object3
+2016-07-28 09:31:53,505 [INFO] [NoneStorage] - performing GET at /s3container6/s3object10
+2016-07-28 09:31:53,506 [WARN] [AbstractOperator] - listerrr: s3container3/s3object63
+2016-07-28 09:31:53,506 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object63
+2016-07-28 09:31:53,506 [WARN] [AbstractOperator] - listerrr: s3container4/s3object49
+2016-07-28 09:31:53,506 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object49
+2016-07-28 09:31:53,506 [INFO] [NoneStorage] - performing GET at /s3container7/s3object41
+2016-07-28 09:31:53,535 [INFO] [NoneStorage] - performing GET at /s3container8/s3object13
+2016-07-28 09:31:53,535 [WARN] [AbstractOperator] - listerrr: s3container5/s3object55
+2016-07-28 09:31:53,536 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object55
+2016-07-28 09:31:53,536 [INFO] [NoneStorage] - performing GET at /s3container9/s3object18
+2016-07-28 09:31:53,608 [WARN] [AbstractOperator] - listerrr: s3container6/s3object35
+2016-07-28 09:31:53,608 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object35
+2016-07-28 09:31:53,608 [INFO] [NoneStorage] - performing GET at /s3container10/s3object16
+2016-07-28 09:31:53,631 [WARN] [AbstractOperator] - listerrr: s3container7/s3object32
+2016-07-28 09:31:53,632 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object32
+2016-07-28 09:31:53,632 [INFO] [NoneStorage] - performing GET at /s3container1/s3object71
+2016-07-28 09:31:53,653 [WARN] [AbstractOperator] - listerrr: s3container8/s3object49
+2016-07-28 09:31:53,653 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object49
+2016-07-28 09:31:53,653 [INFO] [NoneStorage] - performing GET at /s3container2/s3object39
+2016-07-28 09:31:53,665 [INFO] [NoneStorage] - performing GET at /s3container3/s3object93
+2016-07-28 09:31:53,673 [WARN] [AbstractOperator] - listerrr: s3container9/s3object85
+2016-07-28 09:31:53,673 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object85
+2016-07-28 09:31:53,673 [WARN] [AbstractOperator] - listerrr: s3container10/s3object47
+2016-07-28 09:31:53,673 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object47
+2016-07-28 09:31:53,673 [WARN] [AbstractOperator] - listerrr: s3container1/s3object3
+2016-07-28 09:31:53,673 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object3
+2016-07-28 09:31:53,673 [WARN] [AbstractOperator] - listerrr: s3container2/s3object84
+2016-07-28 09:31:53,673 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object84
+2016-07-28 09:31:53,673 [INFO] [NoneStorage] - performing GET at /s3container4/s3object46
+2016-07-28 09:31:53,682 [WARN] [AbstractOperator] - listerrr: s3container3/s3object67
+2016-07-28 09:31:53,682 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object67
+2016-07-28 09:31:53,682 [INFO] [NoneStorage] - performing GET at /s3container5/s3object9
+2016-07-28 09:31:53,726 [WARN] [AbstractOperator] - listerrr: s3container4/s3object27
+2016-07-28 09:31:53,726 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object27
+2016-07-28 09:31:53,726 [INFO] [NoneStorage] - performing GET at /s3container6/s3object60
+2016-07-28 09:31:53,726 [WARN] [AbstractOperator] - listerrr: s3container5/s3object56
+2016-07-28 09:31:53,726 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object56
+2016-07-28 09:31:53,726 [WARN] [AbstractOperator] - listerrr: s3container6/s3object9
+2016-07-28 09:31:53,726 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object9
+2016-07-28 09:31:53,726 [INFO] [NoneStorage] - performing GET at /s3container7/s3object65
+2016-07-28 09:31:53,890 [INFO] [NoneStorage] - performing GET at /s3container8/s3object89
+2016-07-28 09:31:53,890 [WARN] [AbstractOperator] - listerrr: s3container7/s3object83
+2016-07-28 09:31:53,891 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object83
+2016-07-28 09:31:53,891 [INFO] [NoneStorage] - performing GET at /s3container9/s3object57
+2016-07-28 09:31:53,891 [WARN] [AbstractOperator] - listerrr: s3container8/s3object77
+2016-07-28 09:31:53,891 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object77
+2016-07-28 09:31:53,891 [WARN] [AbstractOperator] - listerrr: s3container9/s3object2
+2016-07-28 09:31:53,891 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object2
+2016-07-28 09:31:53,891 [INFO] [NoneStorage] - performing GET at /s3container10/s3object100
+2016-07-28 09:31:53,891 [WARN] [AbstractOperator] - listerrr: s3container10/s3object34
+2016-07-28 09:31:53,892 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object34
+2016-07-28 09:31:53,892 [WARN] [AbstractOperator] - listerrr: s3container1/s3object92
+2016-07-28 09:31:53,892 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object92
+2016-07-28 09:31:53,892 [WARN] [AbstractOperator] - listerrr: s3container2/s3object16
+2016-07-28 09:31:53,892 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object16
+2016-07-28 09:31:53,892 [WARN] [AbstractOperator] - listerrr: s3container3/s3object4
+2016-07-28 09:31:53,892 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object4
+2016-07-28 09:31:53,892 [INFO] [NoneStorage] - performing GET at /s3container1/s3object21
+2016-07-28 09:31:53,909 [WARN] [AbstractOperator] - listerrr: s3container4/s3object45
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object45
+2016-07-28 09:31:53,910 [WARN] [AbstractOperator] - listerrr: s3container5/s3object89
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object89
+2016-07-28 09:31:53,910 [WARN] [AbstractOperator] - listerrr: s3container6/s3object38
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object38
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing GET at /s3container2/s3object65
+2016-07-28 09:31:53,910 [WARN] [AbstractOperator] - listerrr: s3container7/s3object69
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object69
+2016-07-28 09:31:53,910 [WARN] [AbstractOperator] - listerrr: s3container8/s3object56
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object56
+2016-07-28 09:31:53,910 [WARN] [AbstractOperator] - listerrr: s3container9/s3object27
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object27
+2016-07-28 09:31:53,910 [INFO] [NoneStorage] - performing GET at /s3container3/s3object41
+2016-07-28 09:31:53,911 [WARN] [AbstractOperator] - listerrr: s3container10/s3object95
+2016-07-28 09:31:53,911 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object95
+2016-07-28 09:31:53,911 [WARN] [AbstractOperator] - listerrr: s3container1/s3object65
+2016-07-28 09:31:53,911 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object65
+2016-07-28 09:31:53,911 [WARN] [AbstractOperator] - listerrr: s3container2/s3object28
+2016-07-28 09:31:53,911 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object28
+2016-07-28 09:31:53,911 [INFO] [NoneStorage] - performing GET at /s3container4/s3object83
+2016-07-28 09:31:53,912 [WARN] [AbstractOperator] - listerrr: s3container3/s3object23
+2016-07-28 09:31:53,912 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object23
+2016-07-28 09:31:53,913 [INFO] [NoneStorage] - performing GET at /s3container5/s3object69
+2016-07-28 09:31:53,946 [INFO] [NoneStorage] - performing GET at /s3container6/s3object93
+2016-07-28 09:31:53,947 [WARN] [AbstractOperator] - listerrr: s3container4/s3object63
+2016-07-28 09:31:53,947 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object63
+2016-07-28 09:31:53,947 [WARN] [AbstractOperator] - listerrr: s3container5/s3object69
+2016-07-28 09:31:53,947 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object69
+2016-07-28 09:31:53,947 [INFO] [NoneStorage] - performing GET at /s3container7/s3object40
+2016-07-28 09:31:54,085 [INFO] [NoneStorage] - performing GET at /s3container8/s3object43
+2016-07-28 09:31:54,085 [WARN] [AbstractOperator] - listerrr: s3container6/s3object35
+2016-07-28 09:31:54,085 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object35
+2016-07-28 09:31:54,085 [WARN] [AbstractOperator] - listerrr: s3container7/s3object69
+2016-07-28 09:31:54,085 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object69
+2016-07-28 09:31:54,085 [WARN] [AbstractOperator] - listerrr: s3container8/s3object96
+2016-07-28 09:31:54,085 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object96
+2016-07-28 09:31:54,086 [WARN] [AbstractOperator] - listerrr: s3container9/s3object20
+2016-07-28 09:31:54,086 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object20
+2016-07-28 09:31:54,086 [INFO] [NoneStorage] - performing GET at /s3container9/s3object70
+2016-07-28 09:31:54,090 [WARN] [AbstractOperator] - listerrr: s3container10/s3object86
+2016-07-28 09:31:54,090 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object86
+2016-07-28 09:31:54,090 [WARN] [AbstractOperator] - listerrr: s3container1/s3object84
+2016-07-28 09:31:54,090 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object84
+2016-07-28 09:31:54,090 [INFO] [NoneStorage] - performing GET at /s3container10/s3object22
+2016-07-28 09:31:54,098 [WARN] [AbstractOperator] - listerrr: s3container2/s3object10
+2016-07-28 09:31:54,098 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object10
+2016-07-28 09:31:54,098 [WARN] [AbstractOperator] - listerrr: s3container3/s3object25
+2016-07-28 09:31:54,098 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object25
+2016-07-28 09:31:54,098 [INFO] [NoneStorage] - performing GET at /s3container1/s3object20
+2016-07-28 09:31:54,100 [INFO] [NoneStorage] - performing GET at /s3container2/s3object3
+2016-07-28 09:31:54,100 [WARN] [AbstractOperator] - listerrr: s3container4/s3object62
+2016-07-28 09:31:54,101 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object62
+2016-07-28 09:31:54,101 [INFO] [NoneStorage] - performing GET at /s3container3/s3object88
+2016-07-28 09:31:54,133 [INFO] [NoneStorage] - performing GET at /s3container4/s3object48
+2016-07-28 09:31:54,134 [INFO] [NoneStorage] - performing GET at /s3container5/s3object32
+2016-07-28 09:31:54,149 [WARN] [AbstractOperator] - listerrr: s3container5/s3object21
+2016-07-28 09:31:54,149 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object21
+2016-07-28 09:31:54,149 [WARN] [AbstractOperator] - listerrr: s3container6/s3object75
+2016-07-28 09:31:54,149 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object75
+2016-07-28 09:31:54,149 [WARN] [AbstractOperator] - listerrr: s3container7/s3object95
+2016-07-28 09:31:54,149 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object95
+2016-07-28 09:31:54,149 [WARN] [AbstractOperator] - listerrr: s3container8/s3object99
+2016-07-28 09:31:54,150 [WARN] [AbstractOperator] - listerrr: s3container9/s3object30
+2016-07-28 09:31:54,150 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object30
+2016-07-28 09:31:54,150 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object99
+2016-07-28 09:31:54,150 [WARN] [AbstractOperator] - listerrr: s3container10/s3object28
+2016-07-28 09:31:54,150 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object28
+2016-07-28 09:31:54,150 [WARN] [AbstractOperator] - listerrr: s3container1/s3object65
+2016-07-28 09:31:54,150 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object65
+2016-07-28 09:31:54,150 [WARN] [AbstractOperator] - listerrr: s3container2/s3object82
+2016-07-28 09:31:54,150 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object82
+2016-07-28 09:31:54,150 [INFO] [NoneStorage] - performing GET at /s3container6/s3object83
+2016-07-28 09:31:54,150 [WARN] [AbstractOperator] - listerrr: s3container3/s3object49
+2016-07-28 09:31:54,151 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object49
+2016-07-28 09:31:54,151 [WARN] [AbstractOperator] - listerrr: s3container4/s3object63
+2016-07-28 09:31:54,151 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object63
+2016-07-28 09:31:54,151 [WARN] [AbstractOperator] - listerrr: s3container5/s3object57
+2016-07-28 09:31:54,151 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object57
+2016-07-28 09:31:54,151 [WARN] [AbstractOperator] - listerrr: s3container6/s3object89
+2016-07-28 09:31:54,151 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object89
+2016-07-28 09:31:54,151 [WARN] [AbstractOperator] - listerrr: s3container7/s3object84
+2016-07-28 09:31:54,151 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object84
+2016-07-28 09:31:54,151 [INFO] [NoneStorage] - performing GET at /s3container7/s3object94
+2016-07-28 09:31:54,274 [INFO] [NoneStorage] - performing GET at /s3container8/s3object91
+2016-07-28 09:31:54,277 [WARN] [AbstractOperator] - listerrr: s3container8/s3object50
+2016-07-28 09:31:54,278 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object50
+2016-07-28 09:31:54,278 [INFO] [NoneStorage] - performing GET at /s3container9/s3object70
+2016-07-28 09:31:54,290 [INFO] [NoneStorage] - performing GET at /s3container10/s3object5
+2016-07-28 09:31:54,291 [WARN] [AbstractOperator] - listerrr: s3container9/s3object54
+2016-07-28 09:31:54,291 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object54
+2016-07-28 09:31:54,291 [INFO] [NoneStorage] - performing GET at /s3container1/s3object90
+2016-07-28 09:31:54,311 [WARN] [AbstractOperator] - listerrr: s3container10/s3object56
+2016-07-28 09:31:54,311 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object56
+2016-07-28 09:31:54,311 [INFO] [NoneStorage] - performing GET at /s3container2/s3object77
+2016-07-28 09:31:54,323 [WARN] [AbstractOperator] - listerrr: s3container1/s3object24
+2016-07-28 09:31:54,323 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object24
+2016-07-28 09:31:54,323 [WARN] [AbstractOperator] - listerrr: s3container2/s3object45
+2016-07-28 09:31:54,323 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object45
+2016-07-28 09:31:54,323 [INFO] [NoneStorage] - performing GET at /s3container3/s3object29
+2016-07-28 09:31:54,324 [WARN] [AbstractOperator] - listerrr: s3container3/s3object12
+2016-07-28 09:31:54,324 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object12
+2016-07-28 09:31:54,324 [WARN] [AbstractOperator] - listerrr: s3container4/s3object70
+2016-07-28 09:31:54,324 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object70
+2016-07-28 09:31:54,324 [INFO] [NoneStorage] - performing GET at /s3container4/s3object62
+2016-07-28 09:31:54,325 [WARN] [AbstractOperator] - listerrr: s3container5/s3object94
+2016-07-28 09:31:54,325 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object94
+2016-07-28 09:31:54,325 [WARN] [AbstractOperator] - listerrr: s3container6/s3object71
+2016-07-28 09:31:54,325 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object71
+2016-07-28 09:31:54,325 [WARN] [AbstractOperator] - listerrr: s3container7/s3object27
+2016-07-28 09:31:54,326 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object27
+2016-07-28 09:31:54,326 [INFO] [NoneStorage] - performing GET at /s3container5/s3object91
+2016-07-28 09:31:54,375 [INFO] [NoneStorage] - performing GET at /s3container6/s3object9
+2016-07-28 09:31:54,375 [INFO] [NoneStorage] - performing GET at /s3container7/s3object95
+2016-07-28 09:31:54,486 [INFO] [NoneStorage] - performing GET at /s3container8/s3object76
+2016-07-28 09:31:54,493 [INFO] [NoneStorage] - performing GET at /s3container9/s3object16
+2016-07-28 09:31:54,513 [WARN] [AbstractOperator] - listerrr: s3container8/s3object48
+2016-07-28 09:31:54,513 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object48
+2016-07-28 09:31:54,513 [INFO] [NoneStorage] - performing GET at /s3container10/s3object35
+2016-07-28 09:31:54,514 [WARN] [AbstractOperator] - listerrr: s3container9/s3object18
+2016-07-28 09:31:54,515 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object18
+2016-07-28 09:31:54,515 [WARN] [AbstractOperator] - listerrr: s3container10/s3object4
+2016-07-28 09:31:54,515 [INFO] [NoneStorage] - performing GET at /s3container1/s3object25
+2016-07-28 09:31:54,515 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object4
+2016-07-28 09:31:54,515 [WARN] [AbstractOperator] - listerrr: s3container1/s3object7
+2016-07-28 09:31:54,515 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object7
+2016-07-28 09:31:54,516 [INFO] [NoneStorage] - performing GET at /s3container2/s3object60
+2016-07-28 09:31:54,516 [INFO] [NoneStorage] - performing GET at /s3container3/s3object35
+2016-07-28 09:31:54,533 [WARN] [AbstractOperator] - listerrr: s3container2/s3object34
+2016-07-28 09:31:54,533 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object34
+2016-07-28 09:31:54,533 [WARN] [AbstractOperator] - listerrr: s3container3/s3object35
+2016-07-28 09:31:54,534 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object35
+2016-07-28 09:31:54,534 [INFO] [NoneStorage] - performing GET at /s3container4/s3object92
+2016-07-28 09:31:54,544 [WARN] [AbstractOperator] - listerrr: s3container4/s3object100
+2016-07-28 09:31:54,544 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object100
+2016-07-28 09:31:54,544 [WARN] [AbstractOperator] - listerrr: s3container5/s3object81
+2016-07-28 09:31:54,544 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object81
+2016-07-28 09:31:54,544 [INFO] [NoneStorage] - performing GET at /s3container5/s3object64
+2016-07-28 09:31:54,596 [WARN] [AbstractOperator] - listerrr: s3container6/s3object10
+2016-07-28 09:31:54,596 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object10
+2016-07-28 09:31:54,596 [WARN] [AbstractOperator] - listerrr: s3container7/s3object84
+2016-07-28 09:31:54,596 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object84
+2016-07-28 09:31:54,596 [INFO] [NoneStorage] - performing GET at /s3container6/s3object37
+2016-07-28 09:31:54,598 [WARN] [AbstractOperator] - listerrr: s3container8/s3object26
+2016-07-28 09:31:54,598 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object26
+2016-07-28 09:31:54,599 [INFO] [NoneStorage] - performing GET at /s3container7/s3object5
+2016-07-28 09:31:54,697 [WARN] [AbstractOperator] - listerrr: s3container9/s3object20
+2016-07-28 09:31:54,697 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object20
+2016-07-28 09:31:54,697 [WARN] [AbstractOperator] - listerrr: s3container10/s3object76
+2016-07-28 09:31:54,697 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object76
+2016-07-28 09:31:54,697 [WARN] [AbstractOperator] - listerrr: s3container1/s3object9
+2016-07-28 09:31:54,697 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object9
+2016-07-28 09:31:54,698 [INFO] [NoneStorage] - performing GET at /s3container8/s3object25
+2016-07-28 09:31:54,705 [INFO] [NoneStorage] - performing GET at /s3container9/s3object36
+2016-07-28 09:31:54,705 [INFO] [NoneStorage] - performing GET at /s3container10/s3object49
+2016-07-28 09:31:54,706 [INFO] [NoneStorage] - performing GET at /s3container1/s3object78
+2016-07-28 09:31:54,714 [WARN] [AbstractOperator] - listerrr: s3container2/s3object88
+2016-07-28 09:31:54,714 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object88
+2016-07-28 09:31:54,714 [INFO] [NoneStorage] - performing GET at /s3container2/s3object25
+2016-07-28 09:31:54,717 [INFO] [NoneStorage] - performing GET at /s3container3/s3object92
+2016-07-28 09:31:54,758 [WARN] [AbstractOperator] - listerrr: s3container3/s3object56
+2016-07-28 09:31:54,758 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object56
+2016-07-28 09:31:54,758 [INFO] [NoneStorage] - performing GET at /s3container4/s3object38
+2016-07-28 09:31:54,765 [WARN] [AbstractOperator] - listerrr: s3container4/s3object34
+2016-07-28 09:31:54,765 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object34
+2016-07-28 09:31:54,765 [INFO] [NoneStorage] - performing GET at /s3container5/s3object51
+2016-07-28 09:31:54,787 [INFO] [NoneStorage] - performing GET at /s3container6/s3object6
+2016-07-28 09:31:54,788 [INFO] [NoneStorage] - performing GET at /s3container7/s3object58
+2016-07-28 09:31:54,891 [INFO] [NoneStorage] - performing GET at /s3container8/s3object99
+2016-07-28 09:31:54,893 [WARN] [AbstractOperator] - listerrr: s3container5/s3object91
+2016-07-28 09:31:54,893 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object91
+2016-07-28 09:31:54,893 [INFO] [NoneStorage] - performing GET at /s3container9/s3object18
+2016-07-28 09:31:54,904 [INFO] [NoneStorage] - performing GET at /s3container10/s3object19
+2016-07-28 09:31:54,904 [WARN] [AbstractOperator] - listerrr: s3container6/s3object64
+2016-07-28 09:31:54,904 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object64
+2016-07-28 09:31:54,904 [WARN] [AbstractOperator] - listerrr: s3container7/s3object36
+2016-07-28 09:31:54,905 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object36
+2016-07-28 09:31:54,905 [INFO] [NoneStorage] - performing GET at /s3container1/s3object99
+2016-07-28 09:31:54,907 [WARN] [AbstractOperator] - listerrr: s3container8/s3object54
+2016-07-28 09:31:54,907 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object54
+2016-07-28 09:31:54,908 [INFO] [NoneStorage] - performing GET at /s3container2/s3object31
+2016-07-28 09:31:54,915 [INFO] [NoneStorage] - performing GET at /s3container3/s3object7
+2016-07-28 09:31:54,980 [WARN] [AbstractOperator] - listerrr: s3container9/s3object15
+2016-07-28 09:31:54,980 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object15
+2016-07-28 09:31:54,980 [WARN] [AbstractOperator] - listerrr: s3container10/s3object100
+2016-07-28 09:31:54,980 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object100
+2016-07-28 09:31:54,980 [WARN] [AbstractOperator] - listerrr: s3container1/s3object29
+2016-07-28 09:31:54,980 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object29
+2016-07-28 09:31:54,980 [INFO] [NoneStorage] - performing GET at /s3container4/s3object45
+2016-07-28 09:31:54,989 [INFO] [NoneStorage] - performing GET at /s3container5/s3object62
+2016-07-28 09:31:55,010 [WARN] [AbstractOperator] - listerrr: s3container2/s3object76
+2016-07-28 09:31:55,010 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object76
+2016-07-28 09:31:55,010 [INFO] [NoneStorage] - performing GET at /s3container6/s3object81
+2016-07-28 09:31:55,021 [WARN] [AbstractOperator] - listerrr: s3container3/s3object70
+2016-07-28 09:31:55,021 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object70
+2016-07-28 09:31:55,021 [INFO] [NoneStorage] - performing GET at /s3container7/s3object17
+2016-07-28 09:31:55,089 [WARN] [AbstractOperator] - listerrr: s3container4/s3object100
+2016-07-28 09:31:55,089 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object100
+2016-07-28 09:31:55,089 [INFO] [NoneStorage] - performing GET at /s3container8/s3object88
+2016-07-28 09:31:55,091 [WARN] [AbstractOperator] - listerrr: s3container5/s3object88
+2016-07-28 09:31:55,091 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object88
+2016-07-28 09:31:55,091 [INFO] [NoneStorage] - performing GET at /s3container9/s3object47
+2016-07-28 09:31:55,126 [WARN] [AbstractOperator] - listerrr: s3container6/s3object50
+2016-07-28 09:31:55,126 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object50
+2016-07-28 09:31:55,126 [INFO] [NoneStorage] - performing GET at /s3container10/s3object65
+2016-07-28 09:31:55,127 [INFO] [NoneStorage] - performing GET at /s3container1/s3object58
+2016-07-28 09:31:55,128 [WARN] [AbstractOperator] - listerrr: s3container7/s3object11
+2016-07-28 09:31:55,128 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object11
+2016-07-28 09:31:55,128 [WARN] [AbstractOperator] - listerrr: s3container8/s3object80
+2016-07-28 09:31:55,128 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object80
+2016-07-28 09:31:55,128 [INFO] [NoneStorage] - performing GET at /s3container2/s3object21
+2016-07-28 09:31:55,131 [WARN] [AbstractOperator] - listerrr: s3container9/s3object28
+2016-07-28 09:31:55,131 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object28
+2016-07-28 09:31:55,131 [INFO] [NoneStorage] - performing GET at /s3container3/s3object90
+2016-07-28 09:31:55,171 [WARN] [AbstractOperator] - listerrr: s3container10/s3object45
+2016-07-28 09:31:55,171 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object45
+2016-07-28 09:31:55,171 [WARN] [AbstractOperator] - listerrr: s3container1/s3object40
+2016-07-28 09:31:55,171 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object40
+2016-07-28 09:31:55,171 [WARN] [AbstractOperator] - listerrr: s3container2/s3object7
+2016-07-28 09:31:55,171 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object7
+2016-07-28 09:31:55,172 [INFO] [NoneStorage] - performing GET at /s3container4/s3object24
+2016-07-28 09:31:55,180 [WARN] [AbstractOperator] - listerrr: s3container3/s3object46
+2016-07-28 09:31:55,180 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object46
+2016-07-28 09:31:55,180 [WARN] [AbstractOperator] - listerrr: s3container4/s3object13
+2016-07-28 09:31:55,180 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object13
+2016-07-28 09:31:55,180 [WARN] [AbstractOperator] - listerrr: s3container5/s3object36
+2016-07-28 09:31:55,180 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object36
+2016-07-28 09:31:55,180 [WARN] [AbstractOperator] - listerrr: s3container6/s3object32
+2016-07-28 09:31:55,181 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object32
+2016-07-28 09:31:55,181 [WARN] [AbstractOperator] - listerrr: s3container7/s3object75
+2016-07-28 09:31:55,181 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object75
+2016-07-28 09:31:55,181 [WARN] [AbstractOperator] - listerrr: s3container8/s3object48
+2016-07-28 09:31:55,181 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object48
+2016-07-28 09:31:55,181 [INFO] [NoneStorage] - performing GET at /s3container5/s3object52
+2016-07-28 09:31:55,231 [INFO] [NoneStorage] - performing GET at /s3container6/s3object22
+2016-07-28 09:31:55,247 [WARN] [AbstractOperator] - listerrr: s3container9/s3object64
+2016-07-28 09:31:55,248 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object64
+2016-07-28 09:31:55,248 [WARN] [AbstractOperator] - listerrr: s3container10/s3object62
+2016-07-28 09:31:55,248 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object62
+2016-07-28 09:31:55,248 [WARN] [AbstractOperator] - listerrr: s3container1/s3object82
+2016-07-28 09:31:55,248 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object82
+2016-07-28 09:31:55,248 [WARN] [AbstractOperator] - listerrr: s3container2/s3object9
+2016-07-28 09:31:55,248 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object9
+2016-07-28 09:31:55,248 [INFO] [NoneStorage] - performing GET at /s3container7/s3object62
+2016-07-28 09:31:55,302 [WARN] [AbstractOperator] - listerrr: s3container3/s3object2
+2016-07-28 09:31:55,302 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object2
+2016-07-28 09:31:55,302 [INFO] [NoneStorage] - performing GET at /s3container8/s3object36
+2016-07-28 09:31:55,302 [INFO] [NoneStorage] - performing GET at /s3container9/s3object71
+2016-07-28 09:31:55,328 [WARN] [AbstractOperator] - listerrr: s3container4/s3object83
+2016-07-28 09:31:55,328 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object83
+2016-07-28 09:31:55,329 [INFO] [NoneStorage] - performing GET at /s3container10/s3object27
+2016-07-28 09:31:55,332 [INFO] [NoneStorage] - performing GET at /s3container1/s3object42
+2016-07-28 09:31:55,349 [WARN] [AbstractOperator] - listerrr: s3container5/s3object97
+2016-07-28 09:31:55,349 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object97
+2016-07-28 09:31:55,349 [WARN] [AbstractOperator] - listerrr: s3container6/s3object53
+2016-07-28 09:31:55,349 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object53
+2016-07-28 09:31:55,349 [WARN] [AbstractOperator] - listerrr: s3container7/s3object55
+2016-07-28 09:31:55,349 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object55
+2016-07-28 09:31:55,349 [WARN] [AbstractOperator] - listerrr: s3container8/s3object32
+2016-07-28 09:31:55,349 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object32
+2016-07-28 09:31:55,349 [WARN] [AbstractOperator] - listerrr: s3container9/s3object33
+2016-07-28 09:31:55,349 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object33
+2016-07-28 09:31:55,350 [WARN] [AbstractOperator] - listerrr: s3container10/s3object20
+2016-07-28 09:31:55,350 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object20
+2016-07-28 09:31:55,350 [INFO] [NoneStorage] - performing GET at /s3container2/s3object78
+2016-07-28 09:31:55,353 [WARN] [AbstractOperator] - listerrr: s3container1/s3object41
+2016-07-28 09:31:55,353 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object41
+2016-07-28 09:31:55,353 [WARN] [AbstractOperator] - listerrr: s3container2/s3object81
+2016-07-28 09:31:55,353 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object81
+2016-07-28 09:31:55,353 [WARN] [AbstractOperator] - listerrr: s3container3/s3object64
+2016-07-28 09:31:55,353 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object64
+2016-07-28 09:31:55,353 [WARN] [AbstractOperator] - listerrr: s3container4/s3object20
+2016-07-28 09:31:55,353 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object20
+2016-07-28 09:31:55,353 [INFO] [NoneStorage] - performing GET at /s3container3/s3object24
+2016-07-28 09:31:55,359 [INFO] [NoneStorage] - performing GET at /s3container4/s3object85
+2016-07-28 09:31:55,371 [INFO] [NoneStorage] - performing GET at /s3container5/s3object67
+2016-07-28 09:31:55,455 [WARN] [AbstractOperator] - listerrr: s3container5/s3object58
+2016-07-28 09:31:55,455 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object58
+2016-07-28 09:31:55,455 [WARN] [AbstractOperator] - listerrr: s3container6/s3object74
+2016-07-28 09:31:55,455 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object74
+2016-07-28 09:31:55,455 [INFO] [NoneStorage] - performing GET at /s3container6/s3object73
+2016-07-28 09:31:55,469 [WARN] [AbstractOperator] - listerrr: s3container7/s3object17
+2016-07-28 09:31:55,469 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object17
+2016-07-28 09:31:55,470 [WARN] [AbstractOperator] - listerrr: s3container8/s3object79
+2016-07-28 09:31:55,470 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object79
+2016-07-28 09:31:55,470 [INFO] [NoneStorage] - performing GET at /s3container7/s3object75
+2016-07-28 09:31:55,492 [WARN] [AbstractOperator] - listerrr: s3container9/s3object68
+2016-07-28 09:31:55,492 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object68
+2016-07-28 09:31:55,492 [WARN] [AbstractOperator] - listerrr: s3container10/s3object67
+2016-07-28 09:31:55,492 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object67
+2016-07-28 09:31:55,492 [INFO] [NoneStorage] - performing GET at /s3container8/s3object64
+2016-07-28 09:31:55,494 [INFO] [NoneStorage] - performing GET at /s3container9/s3object64
+2016-07-28 09:31:55,520 [INFO] [NoneStorage] - performing GET at /s3container10/s3object69
+2016-07-28 09:31:55,521 [WARN] [AbstractOperator] - listerrr: s3container1/s3object70
+2016-07-28 09:31:55,521 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object70
+2016-07-28 09:31:55,521 [WARN] [AbstractOperator] - listerrr: s3container2/s3object58
+2016-07-28 09:31:55,521 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object58
+2016-07-28 09:31:55,521 [WARN] [AbstractOperator] - listerrr: s3container3/s3object98
+2016-07-28 09:31:55,521 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object98
+2016-07-28 09:31:55,521 [WARN] [AbstractOperator] - listerrr: s3container4/s3object38
+2016-07-28 09:31:55,521 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object38
+2016-07-28 09:31:55,521 [WARN] [AbstractOperator] - listerrr: s3container5/s3object73
+2016-07-28 09:31:55,521 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object73
+2016-07-28 09:31:55,521 [WARN] [AbstractOperator] - listerrr: s3container6/s3object36
+2016-07-28 09:31:55,521 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object36
+2016-07-28 09:31:55,521 [WARN] [AbstractOperator] - listerrr: s3container7/s3object32
+2016-07-28 09:31:55,522 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object32
+2016-07-28 09:31:55,522 [INFO] [NoneStorage] - performing GET at /s3container1/s3object22
+2016-07-28 09:31:55,550 [INFO] [NoneStorage] - performing GET at /s3container2/s3object91
+2016-07-28 09:31:55,552 [INFO] [NoneStorage] - performing GET at /s3container3/s3object53
+2016-07-28 09:31:55,552 [WARN] [AbstractOperator] - listerrr: s3container8/s3object6
+2016-07-28 09:31:55,552 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object6
+2016-07-28 09:31:55,552 [INFO] [NoneStorage] - performing GET at /s3container4/s3object72
+2016-07-28 09:31:55,562 [WARN] [AbstractOperator] - listerrr: s3container9/s3object29
+2016-07-28 09:31:55,562 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object29
+2016-07-28 09:31:55,562 [WARN] [AbstractOperator] - listerrr: s3container10/s3object10
+2016-07-28 09:31:55,562 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object10
+2016-07-28 09:31:55,562 [WARN] [AbstractOperator] - listerrr: s3container1/s3object54
+2016-07-28 09:31:55,562 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object54
+2016-07-28 09:31:55,562 [INFO] [NoneStorage] - performing GET at /s3container5/s3object84
+2016-07-28 09:31:55,679 [WARN] [AbstractOperator] - listerrr: s3container2/s3object91
+2016-07-28 09:31:55,679 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object91
+2016-07-28 09:31:55,679 [INFO] [NoneStorage] - performing GET at /s3container6/s3object76
+2016-07-28 09:31:55,692 [WARN] [AbstractOperator] - listerrr: s3container3/s3object33
+2016-07-28 09:31:55,692 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object33
+2016-07-28 09:31:55,692 [WARN] [AbstractOperator] - listerrr: s3container4/s3object8
+2016-07-28 09:31:55,692 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object8
+2016-07-28 09:31:55,692 [WARN] [AbstractOperator] - listerrr: s3container5/s3object54
+2016-07-28 09:31:55,692 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object54
+2016-07-28 09:31:55,692 [WARN] [AbstractOperator] - listerrr: s3container6/s3object14
+2016-07-28 09:31:55,692 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object14
+2016-07-28 09:31:55,692 [INFO] [NoneStorage] - performing GET at /s3container7/s3object5
+2016-07-28 09:31:55,712 [WARN] [AbstractOperator] - listerrr: s3container7/s3object69
+2016-07-28 09:31:55,712 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object69
+2016-07-28 09:31:55,712 [WARN] [AbstractOperator] - listerrr: s3container8/s3object84
+2016-07-28 09:31:55,712 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object84
+2016-07-28 09:31:55,712 [INFO] [NoneStorage] - performing GET at /s3container9/s3object50
+2016-07-28 09:31:55,712 [INFO] [NoneStorage] - performing GET at /s3container8/s3object25
+2016-07-28 09:31:55,714 [WARN] [AbstractOperator] - listerrr: s3container9/s3object6
+2016-07-28 09:31:55,714 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object6
+2016-07-28 09:31:55,714 [INFO] [NoneStorage] - performing GET at /s3container10/s3object9
+2016-07-28 09:31:55,715 [INFO] [NoneStorage] - performing GET at /s3container1/s3object71
+2016-07-28 09:31:55,767 [INFO] [NoneStorage] - performing GET at /s3container2/s3object16
+2016-07-28 09:31:55,770 [WARN] [AbstractOperator] - listerrr: s3container10/s3object18
+2016-07-28 09:31:55,771 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object18
+2016-07-28 09:31:55,771 [INFO] [NoneStorage] - performing GET at /s3container3/s3object48
+2016-07-28 09:31:55,773 [INFO] [NoneStorage] - performing GET at /s3container4/s3object58
+2016-07-28 09:31:55,774 [INFO] [NoneStorage] - performing GET at /s3container5/s3object10
+2016-07-28 09:31:55,870 [INFO] [NoneStorage] - performing GET at /s3container6/s3object87
+2016-07-28 09:31:55,884 [INFO] [NoneStorage] - performing GET at /s3container7/s3object81
+2016-07-28 09:31:55,925 [WARN] [AbstractOperator] - listerrr: s3container1/s3object52
+2016-07-28 09:31:55,925 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object52
+2016-07-28 09:31:55,925 [INFO] [NoneStorage] - performing GET at /s3container8/s3object73
+2016-07-28 09:31:55,926 [INFO] [NoneStorage] - performing GET at /s3container9/s3object62
+2016-07-28 09:31:55,940 [WARN] [AbstractOperator] - listerrr: s3container2/s3object79
+2016-07-28 09:31:55,940 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object79
+2016-07-28 09:31:55,940 [INFO] [NoneStorage] - performing GET at /s3container10/s3object47
+2016-07-28 09:31:55,940 [INFO] [NoneStorage] - performing GET at /s3container1/s3object89
+2016-07-28 09:31:55,962 [INFO] [NoneStorage] - performing GET at /s3container2/s3object53
+2016-07-28 09:31:55,963 [WARN] [AbstractOperator] - listerrr: s3container3/s3object87
+2016-07-28 09:31:55,963 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object87
+2016-07-28 09:31:55,963 [WARN] [AbstractOperator] - listerrr: s3container4/s3object8
+2016-07-28 09:31:55,963 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object8
+2016-07-28 09:31:55,963 [WARN] [AbstractOperator] - listerrr: s3container5/s3object21
+2016-07-28 09:31:55,964 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object21
+2016-07-28 09:31:55,964 [WARN] [AbstractOperator] - listerrr: s3container6/s3object42
+2016-07-28 09:31:55,964 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object42
+2016-07-28 09:31:55,964 [INFO] [NoneStorage] - performing GET at /s3container3/s3object54
+2016-07-28 09:31:55,993 [WARN] [AbstractOperator] - listerrr: s3container7/s3object29
+2016-07-28 09:31:55,993 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object29
+2016-07-28 09:31:55,993 [WARN] [AbstractOperator] - listerrr: s3container8/s3object73
+2016-07-28 09:31:55,993 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object73
+2016-07-28 09:31:55,993 [WARN] [AbstractOperator] - listerrr: s3container9/s3object99
+2016-07-28 09:31:55,993 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object99
+2016-07-28 09:31:55,993 [INFO] [NoneStorage] - performing GET at /s3container4/s3object12
+2016-07-28 09:31:55,994 [INFO] [NoneStorage] - performing GET at /s3container5/s3object50
+2016-07-28 09:31:56,071 [WARN] [AbstractOperator] - listerrr: s3container10/s3object85
+2016-07-28 09:31:56,071 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object85
+2016-07-28 09:31:56,071 [WARN] [AbstractOperator] - listerrr: s3container1/s3object51
+2016-07-28 09:31:56,071 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object51
+2016-07-28 09:31:56,071 [WARN] [AbstractOperator] - listerrr: s3container2/s3object21
+2016-07-28 09:31:56,071 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object21
+2016-07-28 09:31:56,071 [INFO] [NoneStorage] - performing GET at /s3container6/s3object67
+2016-07-28 09:31:56,100 [WARN] [AbstractOperator] - listerrr: s3container3/s3object66
+2016-07-28 09:31:56,100 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object66
+2016-07-28 09:31:56,100 [INFO] [NoneStorage] - performing GET at /s3container7/s3object66
+2016-07-28 09:31:56,115 [WARN] [AbstractOperator] - listerrr: s3container4/s3object76
+2016-07-28 09:31:56,115 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object76
+2016-07-28 09:31:56,115 [WARN] [AbstractOperator] - listerrr: s3container5/s3object41
+2016-07-28 09:31:56,115 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object41
+2016-07-28 09:31:56,115 [INFO] [NoneStorage] - performing GET at /s3container8/s3object81
+2016-07-28 09:31:56,116 [INFO] [NoneStorage] - performing GET at /s3container9/s3object15
+2016-07-28 09:31:56,161 [WARN] [AbstractOperator] - listerrr: s3container6/s3object85
+2016-07-28 09:31:56,162 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object85
+2016-07-28 09:31:56,162 [INFO] [NoneStorage] - performing GET at /s3container10/s3object44
+2016-07-28 09:31:56,162 [WARN] [AbstractOperator] - listerrr: s3container7/s3object31
+2016-07-28 09:31:56,162 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object31
+2016-07-28 09:31:56,162 [WARN] [AbstractOperator] - listerrr: s3container8/s3object43
+2016-07-28 09:31:56,162 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object43
+2016-07-28 09:31:56,162 [INFO] [NoneStorage] - performing GET at /s3container1/s3object25
+2016-07-28 09:31:56,163 [INFO] [NoneStorage] - performing GET at /s3container2/s3object61
+2016-07-28 09:31:56,164 [WARN] [AbstractOperator] - listerrr: s3container9/s3object5
+2016-07-28 09:31:56,165 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object5
+2016-07-28 09:31:56,165 [WARN] [AbstractOperator] - listerrr: s3container10/s3object85
+2016-07-28 09:31:56,165 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object85
+2016-07-28 09:31:56,165 [WARN] [AbstractOperator] - listerrr: s3container1/s3object79
+2016-07-28 09:31:56,165 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object79
+2016-07-28 09:31:56,165 [WARN] [AbstractOperator] - listerrr: s3container2/s3object45
+2016-07-28 09:31:56,165 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object45
+2016-07-28 09:31:56,165 [INFO] [NoneStorage] - performing GET at /s3container3/s3object19
+2016-07-28 09:31:56,183 [WARN] [AbstractOperator] - listerrr: s3container3/s3object97
+2016-07-28 09:31:56,183 [INFO] [NoneStorage] - performing GET at /s3container4/s3object65
+2016-07-28 09:31:56,183 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object97
+2016-07-28 09:31:56,183 [INFO] [NoneStorage] - performing GET at /s3container5/s3object86
+2016-07-28 09:31:56,293 [WARN] [AbstractOperator] - listerrr: s3container4/s3object84
+2016-07-28 09:31:56,293 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object84
+2016-07-28 09:31:56,293 [INFO] [NoneStorage] - performing GET at /s3container6/s3object61
+2016-07-28 09:31:56,306 [INFO] [NoneStorage] - performing GET at /s3container7/s3object23
+2016-07-28 09:31:56,306 [INFO] [NoneStorage] - performing GET at /s3container8/s3object71
+2016-07-28 09:31:56,321 [WARN] [AbstractOperator] - listerrr: s3container5/s3object68
+2016-07-28 09:31:56,321 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object68
+2016-07-28 09:31:56,321 [INFO] [NoneStorage] - performing GET at /s3container9/s3object10
+2016-07-28 09:31:56,354 [INFO] [NoneStorage] - performing GET at /s3container10/s3object34
+2016-07-28 09:31:56,354 [WARN] [AbstractOperator] - listerrr: s3container6/s3object89
+2016-07-28 09:31:56,354 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object89
+2016-07-28 09:31:56,354 [WARN] [AbstractOperator] - listerrr: s3container7/s3object64
+2016-07-28 09:31:56,354 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object64
+2016-07-28 09:31:56,354 [WARN] [AbstractOperator] - listerrr: s3container8/s3object60
+2016-07-28 09:31:56,354 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object60
+2016-07-28 09:31:56,354 [WARN] [AbstractOperator] - listerrr: s3container9/s3object40
+2016-07-28 09:31:56,354 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object40
+2016-07-28 09:31:56,354 [INFO] [NoneStorage] - performing GET at /s3container1/s3object44
+2016-07-28 09:31:56,384 [WARN] [AbstractOperator] - listerrr: s3container10/s3object31
+2016-07-28 09:31:56,384 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object31
+2016-07-28 09:31:56,384 [WARN] [AbstractOperator] - listerrr: s3container1/s3object44
+2016-07-28 09:31:56,384 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object44
+2016-07-28 09:31:56,384 [WARN] [AbstractOperator] - listerrr: s3container2/s3object46
+2016-07-28 09:31:56,385 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object46
+2016-07-28 09:31:56,385 [WARN] [AbstractOperator] - listerrr: s3container3/s3object78
+2016-07-28 09:31:56,385 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object78
+2016-07-28 09:31:56,385 [INFO] [NoneStorage] - performing GET at /s3container2/s3object80
+2016-07-28 09:31:56,386 [WARN] [AbstractOperator] - listerrr: s3container4/s3object14
+2016-07-28 09:31:56,386 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object14
+2016-07-28 09:31:56,387 [INFO] [NoneStorage] - performing GET at /s3container3/s3object59
+2016-07-28 09:31:56,394 [WARN] [AbstractOperator] - listerrr: s3container5/s3object13
+2016-07-28 09:31:56,394 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object13
+2016-07-28 09:31:56,395 [WARN] [AbstractOperator] - listerrr: s3container6/s3object74
+2016-07-28 09:31:56,395 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object74
+2016-07-28 09:31:56,395 [INFO] [NoneStorage] - performing GET at /s3container4/s3object36
+2016-07-28 09:31:56,396 [INFO] [NoneStorage] - performing GET at /s3container5/s3object84
+2016-07-28 09:31:56,516 [WARN] [AbstractOperator] - listerrr: s3container7/s3object62
+2016-07-28 09:31:56,516 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object62
+2016-07-28 09:31:56,516 [WARN] [AbstractOperator] - listerrr: s3container8/s3object59
+2016-07-28 09:31:56,516 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object59
+2016-07-28 09:31:56,516 [WARN] [AbstractOperator] - listerrr: s3container9/s3object69
+2016-07-28 09:31:56,516 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object69
+2016-07-28 09:31:56,516 [WARN] [AbstractOperator] - listerrr: s3container10/s3object46
+2016-07-28 09:31:56,516 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object46
+2016-07-28 09:31:56,516 [WARN] [AbstractOperator] - listerrr: s3container1/s3object86
+2016-07-28 09:31:56,516 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object86
+2016-07-28 09:31:56,517 [WARN] [AbstractOperator] - listerrr: s3container2/s3object91
+2016-07-28 09:31:56,517 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object91
+2016-07-28 09:31:56,517 [WARN] [AbstractOperator] - listerrr: s3container3/s3object78
+2016-07-28 09:31:56,517 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object78
+2016-07-28 09:31:56,517 [WARN] [AbstractOperator] - listerrr: s3container4/s3object77
+2016-07-28 09:31:56,517 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object77
+2016-07-28 09:31:56,517 [WARN] [AbstractOperator] - listerrr: s3container5/s3object21
+2016-07-28 09:31:56,517 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object21
+2016-07-28 09:31:56,517 [WARN] [AbstractOperator] - listerrr: s3container6/s3object90
+2016-07-28 09:31:56,517 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object90
+2016-07-28 09:31:56,517 [INFO] [NoneStorage] - performing GET at /s3container6/s3object74
+2016-07-28 09:31:56,527 [INFO] [NoneStorage] - performing GET at /s3container7/s3object66
+2016-07-28 09:31:56,528 [INFO] [NoneStorage] - performing GET at /s3container8/s3object70
+2016-07-28 09:31:56,543 [INFO] [NoneStorage] - performing GET at /s3container9/s3object58
+2016-07-28 09:31:56,544 [WARN] [AbstractOperator] - listerrr: s3container7/s3object57
+2016-07-28 09:31:56,544 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object57
+2016-07-28 09:31:56,544 [INFO] [NoneStorage] - performing GET at /s3container10/s3object7
+2016-07-28 09:31:56,544 [INFO] [NoneStorage] - performing GET at /s3container1/s3object97
+2016-07-28 09:31:56,610 [INFO] [NoneStorage] - performing GET at /s3container2/s3object99
+2016-07-28 09:31:56,610 [INFO] [NoneStorage] - performing GET at /s3container3/s3object37
+2016-07-28 09:31:56,610 [INFO] [NoneStorage] - performing GET at /s3container4/s3object48
+2016-07-28 09:31:56,610 [WARN] [AbstractOperator] - listerrr: s3container8/s3object47
+2016-07-28 09:31:56,610 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object47
+2016-07-28 09:31:56,610 [WARN] [AbstractOperator] - listerrr: s3container9/s3object24
+2016-07-28 09:31:56,610 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object24
+2016-07-28 09:31:56,610 [INFO] [NoneStorage] - performing GET at /s3container5/s3object10
+2016-07-28 09:31:56,719 [WARN] [AbstractOperator] - listerrr: s3container10/s3object14
+2016-07-28 09:31:56,719 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object14
+2016-07-28 09:31:56,719 [WARN] [AbstractOperator] - listerrr: s3container1/s3object62
+2016-07-28 09:31:56,719 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object62
+2016-07-28 09:31:56,719 [WARN] [AbstractOperator] - listerrr: s3container2/s3object86
+2016-07-28 09:31:56,719 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object86
+2016-07-28 09:31:56,719 [WARN] [AbstractOperator] - listerrr: s3container3/s3object81
+2016-07-28 09:31:56,720 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object81
+2016-07-28 09:31:56,720 [WARN] [AbstractOperator] - listerrr: s3container4/s3object24
+2016-07-28 09:31:56,720 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object24
+2016-07-28 09:31:56,720 [WARN] [AbstractOperator] - listerrr: s3container5/s3object6
+2016-07-28 09:31:56,720 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object6
+2016-07-28 09:31:56,720 [WARN] [AbstractOperator] - listerrr: s3container6/s3object70
+2016-07-28 09:31:56,720 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object70
+2016-07-28 09:31:56,720 [WARN] [AbstractOperator] - listerrr: s3container7/s3object46
+2016-07-28 09:31:56,721 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object46
+2016-07-28 09:31:56,721 [WARN] [AbstractOperator] - listerrr: s3container8/s3object18
+2016-07-28 09:31:56,721 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object18
+2016-07-28 09:31:56,721 [INFO] [NoneStorage] - performing GET at /s3container6/s3object41
+2016-07-28 09:31:56,732 [WARN] [AbstractOperator] - listerrr: s3container9/s3object52
+2016-07-28 09:31:56,733 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object52
+2016-07-28 09:31:56,733 [INFO] [NoneStorage] - performing GET at /s3container7/s3object73
+2016-07-28 09:31:56,742 [WARN] [AbstractOperator] - listerrr: s3container10/s3object78
+2016-07-28 09:31:56,742 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object78
+2016-07-28 09:31:56,742 [WARN] [AbstractOperator] - listerrr: s3container1/s3object93
+2016-07-28 09:31:56,742 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object93
+2016-07-28 09:31:56,742 [INFO] [NoneStorage] - performing GET at /s3container8/s3object30
+2016-07-28 09:31:56,745 [WARN] [AbstractOperator] - listerrr: s3container2/s3object60
+2016-07-28 09:31:56,745 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object60
+2016-07-28 09:31:56,746 [INFO] [NoneStorage] - performing GET at /s3container9/s3object66
+2016-07-28 09:31:56,746 [INFO] [NoneStorage] - performing GET at /s3container10/s3object32
+2016-07-28 09:31:56,748 [WARN] [AbstractOperator] - listerrr: s3container3/s3object7
+2016-07-28 09:31:56,748 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object7
+2016-07-28 09:31:56,748 [INFO] [NoneStorage] - performing GET at /s3container1/s3object51
+2016-07-28 09:31:56,800 [INFO] [NoneStorage] - performing GET at /s3container2/s3object87
+2016-07-28 09:31:56,801 [WARN] [AbstractOperator] - listerrr: s3container4/s3object11
+2016-07-28 09:31:56,801 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object11
+2016-07-28 09:31:56,801 [WARN] [AbstractOperator] - listerrr: s3container5/s3object65
+2016-07-28 09:31:56,801 [WARN] [AbstractOperator] - listerrr: s3container6/s3object100
+2016-07-28 09:31:56,801 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object100
+2016-07-28 09:31:56,802 [WARN] [AbstractOperator] - listerrr: s3container7/s3object29
+2016-07-28 09:31:56,802 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object29
+2016-07-28 09:31:56,802 [WARN] [AbstractOperator] - listerrr: s3container8/s3object72
+2016-07-28 09:31:56,802 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object72
+2016-07-28 09:31:56,802 [INFO] [NoneStorage] - performing GET at /s3container3/s3object18
+2016-07-28 09:31:56,801 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object65
+2016-07-28 09:31:56,802 [INFO] [NoneStorage] - performing GET at /s3container4/s3object21
+2016-07-28 09:31:56,831 [WARN] [AbstractOperator] - listerrr: s3container9/s3object30
+2016-07-28 09:31:56,831 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object30
+2016-07-28 09:31:56,832 [INFO] [NoneStorage] - performing GET at /s3container5/s3object94
+2016-07-28 09:31:56,923 [INFO] [NoneStorage] - performing GET at /s3container6/s3object7
+2016-07-28 09:31:56,932 [WARN] [AbstractOperator] - listerrr: s3container10/s3object87
+2016-07-28 09:31:56,933 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object87
+2016-07-28 09:31:56,933 [WARN] [AbstractOperator] - listerrr: s3container1/s3object26
+2016-07-28 09:31:56,933 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object26
+2016-07-28 09:31:56,933 [INFO] [NoneStorage] - performing GET at /s3container7/s3object49
+2016-07-28 09:31:56,944 [INFO] [NoneStorage] - performing GET at /s3container8/s3object52
+2016-07-28 09:31:56,946 [WARN] [AbstractOperator] - listerrr: s3container2/s3object39
+2016-07-28 09:31:56,946 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object39
+2016-07-28 09:31:56,946 [WARN] [AbstractOperator] - listerrr: s3container3/s3object52
+2016-07-28 09:31:56,946 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object52
+2016-07-28 09:31:56,946 [INFO] [NoneStorage] - performing GET at /s3container9/s3object87
+2016-07-28 09:31:56,947 [INFO] [NoneStorage] - performing GET at /s3container10/s3object16
+2016-07-28 09:31:56,968 [WARN] [AbstractOperator] - listerrr: s3container4/s3object57
+2016-07-28 09:31:56,968 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object57
+2016-07-28 09:31:56,968 [INFO] [NoneStorage] - performing GET at /s3container1/s3object76
+2016-07-28 09:31:57,011 [INFO] [NoneStorage] - performing GET at /s3container2/s3object40
+2016-07-28 09:31:57,012 [WARN] [AbstractOperator] - listerrr: s3container5/s3object24
+2016-07-28 09:31:57,013 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object24
+2016-07-28 09:31:57,013 [WARN] [AbstractOperator] - listerrr: s3container6/s3object65
+2016-07-28 09:31:57,013 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object65
+2016-07-28 09:31:57,013 [WARN] [AbstractOperator] - listerrr: s3container7/s3object49
+2016-07-28 09:31:57,013 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object49
+2016-07-28 09:31:57,013 [WARN] [AbstractOperator] - listerrr: s3container8/s3object33
+2016-07-28 09:31:57,013 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object33
+2016-07-28 09:31:57,013 [WARN] [AbstractOperator] - listerrr: s3container9/s3object78
+2016-07-28 09:31:57,013 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object78
+2016-07-28 09:31:57,013 [WARN] [AbstractOperator] - listerrr: s3container10/s3object23
+2016-07-28 09:31:57,014 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object23
+2016-07-28 09:31:57,014 [INFO] [NoneStorage] - performing GET at /s3container3/s3object40
+2016-07-28 09:31:57,022 [WARN] [AbstractOperator] - listerrr: s3container1/s3object11
+2016-07-28 09:31:57,022 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object11
+2016-07-28 09:31:57,022 [WARN] [AbstractOperator] - listerrr: s3container2/s3object25
+2016-07-28 09:31:57,022 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object25
+2016-07-28 09:31:57,023 [INFO] [NoneStorage] - performing GET at /s3container4/s3object36
+2016-07-28 09:31:57,054 [INFO] [NoneStorage] - performing GET at /s3container5/s3object43
+2016-07-28 09:31:57,124 [WARN] [AbstractOperator] - listerrr: s3container3/s3object20
+2016-07-28 09:31:57,124 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object20
+2016-07-28 09:31:57,124 [WARN] [AbstractOperator] - listerrr: s3container4/s3object51
+2016-07-28 09:31:57,124 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object51
+2016-07-28 09:31:57,124 [INFO] [NoneStorage] - performing GET at /s3container6/s3object6
+2016-07-28 09:31:57,134 [WARN] [AbstractOperator] - listerrr: s3container5/s3object54
+2016-07-28 09:31:57,134 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object54
+2016-07-28 09:31:57,134 [INFO] [NoneStorage] - performing GET at /s3container7/s3object12
+2016-07-28 09:31:57,143 [WARN] [AbstractOperator] - listerrr: s3container6/s3object34
+2016-07-28 09:31:57,143 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object34
+2016-07-28 09:31:57,143 [INFO] [NoneStorage] - performing GET at /s3container8/s3object47
+2016-07-28 09:31:57,156 [WARN] [AbstractOperator] - listerrr: s3container7/s3object63
+2016-07-28 09:31:57,156 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object63
+2016-07-28 09:31:57,156 [WARN] [AbstractOperator] - listerrr: s3container8/s3object34
+2016-07-28 09:31:57,156 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object34
+2016-07-28 09:31:57,156 [INFO] [NoneStorage] - performing GET at /s3container9/s3object40
+2016-07-28 09:31:57,160 [WARN] [AbstractOperator] - listerrr: s3container9/s3object80
+2016-07-28 09:31:57,160 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object80
+2016-07-28 09:31:57,160 [WARN] [AbstractOperator] - listerrr: s3container10/s3object65
+2016-07-28 09:31:57,160 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object65
+2016-07-28 09:31:57,160 [WARN] [AbstractOperator] - listerrr: s3container1/s3object71
+2016-07-28 09:31:57,160 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object71
+2016-07-28 09:31:57,160 [WARN] [AbstractOperator] - listerrr: s3container2/s3object39
+2016-07-28 09:31:57,161 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object39
+2016-07-28 09:31:57,161 [WARN] [AbstractOperator] - listerrr: s3container3/s3object4
+2016-07-28 09:31:57,161 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object4
+2016-07-28 09:31:57,161 [WARN] [AbstractOperator] - listerrr: s3container4/s3object80
+2016-07-28 09:31:57,161 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object80
+2016-07-28 09:31:57,161 [WARN] [AbstractOperator] - listerrr: s3container5/s3object94
+2016-07-28 09:31:57,161 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object94
+2016-07-28 09:31:57,161 [WARN] [AbstractOperator] - listerrr: s3container6/s3object75
+2016-07-28 09:31:57,162 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object75
+2016-07-28 09:31:57,162 [WARN] [AbstractOperator] - listerrr: s3container7/s3object7
+2016-07-28 09:31:57,162 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object7
+2016-07-28 09:31:57,162 [WARN] [AbstractOperator] - listerrr: s3container8/s3object50
+2016-07-28 09:31:57,162 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object50
+2016-07-28 09:31:57,162 [INFO] [NoneStorage] - performing GET at /s3container10/s3object90
+2016-07-28 09:31:57,189 [WARN] [AbstractOperator] - listerrr: s3container9/s3object43
+2016-07-28 09:31:57,189 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object43
+2016-07-28 09:31:57,190 [INFO] [NoneStorage] - performing GET at /s3container1/s3object63
+2016-07-28 09:31:57,204 [INFO] [NoneStorage] - performing GET at /s3container2/s3object71
+2016-07-28 09:31:57,213 [WARN] [AbstractOperator] - listerrr: s3container10/s3object24
+2016-07-28 09:31:57,213 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object24
+2016-07-28 09:31:57,214 [WARN] [AbstractOperator] - listerrr: s3container1/s3object38
+2016-07-28 09:31:57,214 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object38
+2016-07-28 09:31:57,214 [WARN] [AbstractOperator] - listerrr: s3container2/s3object41
+2016-07-28 09:31:57,214 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object41
+2016-07-28 09:31:57,214 [INFO] [NoneStorage] - performing GET at /s3container3/s3object80
+2016-07-28 09:31:57,233 [INFO] [NoneStorage] - performing GET at /s3container4/s3object49
+2016-07-28 09:31:57,278 [INFO] [NoneStorage] - performing GET at /s3container5/s3object49
+2016-07-28 09:31:57,324 [WARN] [AbstractOperator] - listerrr: s3container3/s3object5
+2016-07-28 09:31:57,324 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object5
+2016-07-28 09:31:57,324 [WARN] [AbstractOperator] - listerrr: s3container4/s3object38
+2016-07-28 09:31:57,324 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object38
+2016-07-28 09:31:57,324 [WARN] [AbstractOperator] - listerrr: s3container5/s3object41
+2016-07-28 09:31:57,324 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object41
+2016-07-28 09:31:57,324 [WARN] [AbstractOperator] - listerrr: s3container6/s3object12
+2016-07-28 09:31:57,325 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object12
+2016-07-28 09:31:57,325 [WARN] [AbstractOperator] - listerrr: s3container7/s3object49
+2016-07-28 09:31:57,325 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object49
+2016-07-28 09:31:57,325 [INFO] [NoneStorage] - performing GET at /s3container6/s3object74
+2016-07-28 09:31:57,334 [WARN] [AbstractOperator] - listerrr: s3container8/s3object13
+2016-07-28 09:31:57,335 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object13
+2016-07-28 09:31:57,335 [WARN] [AbstractOperator] - listerrr: s3container9/s3object8
+2016-07-28 09:31:57,335 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object8
+2016-07-28 09:31:57,335 [WARN] [AbstractOperator] - listerrr: s3container10/s3object60
+2016-07-28 09:31:57,335 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object60
+2016-07-28 09:31:57,335 [INFO] [NoneStorage] - performing GET at /s3container7/s3object59
+2016-07-28 09:31:57,346 [INFO] [NoneStorage] - performing GET at /s3container8/s3object61
+2016-07-28 09:31:57,380 [INFO] [NoneStorage] - performing GET at /s3container9/s3object66
+2016-07-28 09:31:57,380 [INFO] [NoneStorage] - performing GET at /s3container10/s3object87
+2016-07-28 09:31:57,388 [WARN] [AbstractOperator] - listerrr: s3container1/s3object47
+2016-07-28 09:31:57,388 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object47
+2016-07-28 09:31:57,388 [WARN] [AbstractOperator] - listerrr: s3container2/s3object7
+2016-07-28 09:31:57,388 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object7
+2016-07-28 09:31:57,388 [WARN] [AbstractOperator] - listerrr: s3container3/s3object31
+2016-07-28 09:31:57,389 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object31
+2016-07-28 09:31:57,389 [WARN] [AbstractOperator] - listerrr: s3container4/s3object14
+2016-07-28 09:31:57,389 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object14
+2016-07-28 09:31:57,389 [WARN] [AbstractOperator] - listerrr: s3container5/s3object67
+2016-07-28 09:31:57,389 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object67
+2016-07-28 09:31:57,389 [INFO] [NoneStorage] - performing GET at /s3container1/s3object30
+2016-07-28 09:31:57,395 [WARN] [AbstractOperator] - listerrr: s3container6/s3object7
+2016-07-28 09:31:57,395 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object7
+2016-07-28 09:31:57,395 [INFO] [NoneStorage] - performing GET at /s3container2/s3object69
+2016-07-28 09:31:57,416 [INFO] [NoneStorage] - performing GET at /s3container3/s3object44
+2016-07-28 09:31:57,435 [INFO] [NoneStorage] - performing GET at /s3container4/s3object10
+2016-07-28 09:31:57,500 [WARN] [AbstractOperator] - listerrr: s3container7/s3object13
+2016-07-28 09:31:57,500 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object13
+2016-07-28 09:31:57,500 [WARN] [AbstractOperator] - listerrr: s3container8/s3object2
+2016-07-28 09:31:57,500 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object2
+2016-07-28 09:31:57,500 [INFO] [NoneStorage] - performing GET at /s3container5/s3object22
+2016-07-28 09:31:57,526 [WARN] [AbstractOperator] - listerrr: s3container9/s3object37
+2016-07-28 09:31:57,527 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object37
+2016-07-28 09:31:57,527 [WARN] [AbstractOperator] - listerrr: s3container10/s3object35
+2016-07-28 09:31:57,527 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object35
+2016-07-28 09:31:57,527 [WARN] [AbstractOperator] - listerrr: s3container1/s3object48
+2016-07-28 09:31:57,527 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object48
+2016-07-28 09:31:57,527 [WARN] [AbstractOperator] - listerrr: s3container2/s3object98
+2016-07-28 09:31:57,527 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object98
+2016-07-28 09:31:57,528 [INFO] [NoneStorage] - performing GET at /s3container6/s3object43
+2016-07-28 09:31:57,537 [WARN] [AbstractOperator] - listerrr: s3container3/s3object3
+2016-07-28 09:31:57,537 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object3
+2016-07-28 09:31:57,537 [WARN] [AbstractOperator] - listerrr: s3container4/s3object63
+2016-07-28 09:31:57,537 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object63
+2016-07-28 09:31:57,537 [WARN] [AbstractOperator] - listerrr: s3container5/s3object87
+2016-07-28 09:31:57,538 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object87
+2016-07-28 09:31:57,538 [INFO] [NoneStorage] - performing GET at /s3container7/s3object18
+2016-07-28 09:31:57,548 [WARN] [AbstractOperator] - listerrr: s3container6/s3object96
+2016-07-28 09:31:57,548 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object96
+2016-07-28 09:31:57,548 [WARN] [AbstractOperator] - listerrr: s3container7/s3object5
+2016-07-28 09:31:57,548 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object5
+2016-07-28 09:31:57,548 [INFO] [NoneStorage] - performing GET at /s3container8/s3object64
+2016-07-28 09:31:57,581 [INFO] [NoneStorage] - performing GET at /s3container9/s3object61
+2016-07-28 09:31:57,582 [INFO] [NoneStorage] - performing GET at /s3container10/s3object70
+2016-07-28 09:31:57,582 [WARN] [AbstractOperator] - listerrr: s3container8/s3object43
+2016-07-28 09:31:57,582 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object43
+2016-07-28 09:31:57,583 [WARN] [AbstractOperator] - listerrr: s3container9/s3object72
+2016-07-28 09:31:57,583 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object72
+2016-07-28 09:31:57,583 [WARN] [AbstractOperator] - listerrr: s3container10/s3object26
+2016-07-28 09:31:57,583 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object26
+2016-07-28 09:31:57,583 [WARN] [AbstractOperator] - listerrr: s3container1/s3object86
+2016-07-28 09:31:57,583 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object86
+2016-07-28 09:31:57,583 [INFO] [NoneStorage] - performing GET at /s3container1/s3object81
+2016-07-28 09:31:57,586 [WARN] [AbstractOperator] - listerrr: s3container2/s3object12
+2016-07-28 09:31:57,586 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object12
+2016-07-28 09:31:57,586 [WARN] [AbstractOperator] - listerrr: s3container3/s3object65
+2016-07-28 09:31:57,586 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object65
+2016-07-28 09:31:57,587 [INFO] [NoneStorage] - performing GET at /s3container2/s3object11
+2016-07-28 09:31:57,647 [WARN] [AbstractOperator] - listerrr: s3container4/s3object14
+2016-07-28 09:31:57,647 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object14
+2016-07-28 09:31:57,648 [WARN] [AbstractOperator] - listerrr: s3container5/s3object26
+2016-07-28 09:31:57,648 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object26
+2016-07-28 09:31:57,648 [INFO] [NoneStorage] - performing GET at /s3container3/s3object14
+2016-07-28 09:31:57,649 [WARN] [AbstractOperator] - listerrr: s3container6/s3object37
+2016-07-28 09:31:57,649 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object37
+2016-07-28 09:31:57,649 [INFO] [NoneStorage] - performing GET at /s3container4/s3object84
+2016-07-28 09:31:57,730 [WARN] [AbstractOperator] - listerrr: s3container7/s3object26
+2016-07-28 09:31:57,730 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object26
+2016-07-28 09:31:57,731 [INFO] [NoneStorage] - performing GET at /s3container5/s3object3
+2016-07-28 09:31:57,733 [INFO] [NoneStorage] - performing GET at /s3container6/s3object1
+2016-07-28 09:31:57,750 [WARN] [AbstractOperator] - listerrr: s3container8/s3object59
+2016-07-28 09:31:57,750 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object59
+2016-07-28 09:31:57,750 [INFO] [NoneStorage] - performing GET at /s3container7/s3object84
+2016-07-28 09:31:57,760 [INFO] [NoneStorage] - performing GET at /s3container8/s3object58
+2016-07-28 09:31:57,851 [INFO] [NoneStorage] - performing GET at /s3container9/s3object36
+2016-07-28 09:31:57,851 [WARN] [AbstractOperator] - listerrr: s3container9/s3object75
+2016-07-28 09:31:57,851 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object75
+2016-07-28 09:31:57,851 [WARN] [AbstractOperator] - listerrr: s3container10/s3object47
+2016-07-28 09:31:57,851 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object47
+2016-07-28 09:31:57,852 [INFO] [NoneStorage] - performing GET at /s3container1/s3object93
+2016-07-28 09:31:57,851 [INFO] [NoneStorage] - performing GET at /s3container10/s3object38
+2016-07-28 09:31:57,858 [WARN] [AbstractOperator] - listerrr: s3container1/s3object59
+2016-07-28 09:31:57,858 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object59
+2016-07-28 09:31:57,858 [INFO] [NoneStorage] - performing GET at /s3container2/s3object71
+2016-07-28 09:31:57,859 [WARN] [AbstractOperator] - listerrr: s3container2/s3object87
+2016-07-28 09:31:57,859 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object87
+2016-07-28 09:31:57,859 [WARN] [AbstractOperator] - listerrr: s3container3/s3object44
+2016-07-28 09:31:57,859 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object44
+2016-07-28 09:31:57,860 [WARN] [AbstractOperator] - listerrr: s3container4/s3object59
+2016-07-28 09:31:57,860 [WARN] [AbstractOperator] - listerrr: s3container5/s3object47
+2016-07-28 09:31:57,860 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object47
+2016-07-28 09:31:57,860 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object59
+2016-07-28 09:31:57,860 [INFO] [NoneStorage] - performing GET at /s3container3/s3object82
+2016-07-28 09:31:57,860 [WARN] [AbstractOperator] - listerrr: s3container6/s3object95
+2016-07-28 09:31:57,861 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object95
+2016-07-28 09:31:57,861 [WARN] [AbstractOperator] - listerrr: s3container7/s3object77
+2016-07-28 09:31:57,861 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object77
+2016-07-28 09:31:57,861 [WARN] [AbstractOperator] - listerrr: s3container8/s3object83
+2016-07-28 09:31:57,861 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object83
+2016-07-28 09:31:57,861 [INFO] [NoneStorage] - performing GET at /s3container4/s3object74
+2016-07-28 09:31:57,942 [WARN] [AbstractOperator] - listerrr: s3container9/s3object68
+2016-07-28 09:31:57,942 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object68
+2016-07-28 09:31:57,942 [INFO] [NoneStorage] - performing GET at /s3container5/s3object23
+2016-07-28 09:31:57,949 [WARN] [AbstractOperator] - listerrr: s3container10/s3object96
+2016-07-28 09:31:57,949 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object96
+2016-07-28 09:31:57,949 [WARN] [AbstractOperator] - listerrr: s3container1/s3object52
+2016-07-28 09:31:57,949 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object52
+2016-07-28 09:31:57,950 [INFO] [NoneStorage] - performing GET at /s3container6/s3object34
+2016-07-28 09:31:57,951 [WARN] [AbstractOperator] - listerrr: s3container2/s3object70
+2016-07-28 09:31:57,951 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object70
+2016-07-28 09:31:57,951 [WARN] [AbstractOperator] - listerrr: s3container3/s3object84
+2016-07-28 09:31:57,952 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object84
+2016-07-28 09:31:57,952 [WARN] [AbstractOperator] - listerrr: s3container4/s3object49
+2016-07-28 09:31:57,952 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object49
+2016-07-28 09:31:57,952 [INFO] [NoneStorage] - performing GET at /s3container7/s3object63
+2016-07-28 09:31:57,953 [INFO] [NoneStorage] - performing GET at /s3container8/s3object70
+2016-07-28 09:31:58,042 [WARN] [AbstractOperator] - listerrr: s3container5/s3object59
+2016-07-28 09:31:58,042 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object59
+2016-07-28 09:31:58,043 [INFO] [NoneStorage] - performing GET at /s3container9/s3object85
+2016-07-28 09:31:58,049 [INFO] [NoneStorage] - performing GET at /s3container10/s3object59
+2016-07-28 09:31:58,050 [INFO] [NoneStorage] - performing GET at /s3container1/s3object64
+2016-07-28 09:31:58,051 [WARN] [AbstractOperator] - listerrr: s3container6/s3object41
+2016-07-28 09:31:58,051 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object41
+2016-07-28 09:31:58,051 [INFO] [NoneStorage] - performing GET at /s3container2/s3object35
+2016-07-28 09:31:58,082 [INFO] [NoneStorage] - performing GET at /s3container3/s3object99
+2016-07-28 09:31:58,083 [INFO] [NoneStorage] - performing GET at /s3container4/s3object75
+2016-07-28 09:31:58,132 [WARN] [AbstractOperator] - listerrr: s3container7/s3object5
+2016-07-28 09:31:58,132 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object5
+2016-07-28 09:31:58,132 [WARN] [AbstractOperator] - listerrr: s3container8/s3object77
+2016-07-28 09:31:58,133 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object77
+2016-07-28 09:31:58,133 [INFO] [NoneStorage] - performing GET at /s3container5/s3object32
+2016-07-28 09:31:58,140 [WARN] [AbstractOperator] - listerrr: s3container9/s3object85
+2016-07-28 09:31:58,140 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object85
+2016-07-28 09:31:58,140 [WARN] [AbstractOperator] - listerrr: s3container10/s3object96
+2016-07-28 09:31:58,140 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object96
+2016-07-28 09:31:58,140 [INFO] [NoneStorage] - performing GET at /s3container6/s3object57
+2016-07-28 09:31:58,140 [INFO] [NoneStorage] - performing GET at /s3container7/s3object40
+2016-07-28 09:31:58,141 [INFO] [NoneStorage] - performing GET at /s3container8/s3object53
+2016-07-28 09:31:58,241 [INFO] [NoneStorage] - performing GET at /s3container9/s3object42
+2016-07-28 09:31:58,241 [WARN] [AbstractOperator] - listerrr: s3container1/s3object24
+2016-07-28 09:31:58,242 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object24
+2016-07-28 09:31:58,242 [INFO] [NoneStorage] - performing GET at /s3container10/s3object30
+2016-07-28 09:31:58,242 [WARN] [AbstractOperator] - listerrr: s3container2/s3object19
+2016-07-28 09:31:58,242 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object19
+2016-07-28 09:31:58,242 [INFO] [NoneStorage] - performing GET at /s3container1/s3object77
+2016-07-28 09:31:58,250 [INFO] [NoneStorage] - performing GET at /s3container2/s3object91
+2016-07-28 09:31:58,303 [INFO] [NoneStorage] - performing GET at /s3container3/s3object57
+2016-07-28 09:31:58,304 [INFO] [NoneStorage] - performing GET at /s3container4/s3object75
+2016-07-28 09:31:58,329 [WARN] [AbstractOperator] - listerrr: s3container3/s3object50
+2016-07-28 09:31:58,329 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object50
+2016-07-28 09:31:58,329 [WARN] [AbstractOperator] - listerrr: s3container4/s3object87
+2016-07-28 09:31:58,329 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object87
+2016-07-28 09:31:58,329 [WARN] [AbstractOperator] - listerrr: s3container5/s3object77
+2016-07-28 09:31:58,330 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object77
+2016-07-28 09:31:58,345 [INFO] [NoneStorage] - performing GET at /s3container5/s3object31
+2016-07-28 09:31:58,345 [INFO] [NoneStorage] - performing GET at /s3container6/s3object70
+2016-07-28 09:31:58,353 [WARN] [AbstractOperator] - listerrr: s3container6/s3object1
+2016-07-28 09:31:58,353 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object1
+2016-07-28 09:31:58,353 [WARN] [AbstractOperator] - listerrr: s3container7/s3object14
+2016-07-28 09:31:58,353 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object14
+2016-07-28 09:31:58,353 [WARN] [AbstractOperator] - listerrr: s3container8/s3object59
+2016-07-28 09:31:58,353 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object59
+2016-07-28 09:31:58,353 [WARN] [AbstractOperator] - listerrr: s3container9/s3object11
+2016-07-28 09:31:58,353 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object11
+2016-07-28 09:31:58,353 [WARN] [AbstractOperator] - listerrr: s3container10/s3object23
+2016-07-28 09:31:58,353 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object23
+2016-07-28 09:31:58,353 [WARN] [AbstractOperator] - listerrr: s3container1/s3object26
+2016-07-28 09:31:58,353 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object26
+2016-07-28 09:31:58,353 [INFO] [NoneStorage] - performing GET at /s3container7/s3object31
+2016-07-28 09:31:58,362 [WARN] [AbstractOperator] - listerrr: s3container2/s3object47
+2016-07-28 09:31:58,362 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object47
+2016-07-28 09:31:58,362 [INFO] [NoneStorage] - performing GET at /s3container8/s3object56
+2016-07-28 09:31:58,453 [INFO] [NoneStorage] - performing GET at /s3container9/s3object80
+2016-07-28 09:31:58,461 [INFO] [NoneStorage] - performing GET at /s3container10/s3object50
+2016-07-28 09:31:58,462 [WARN] [AbstractOperator] - listerrr: s3container3/s3object62
+2016-07-28 09:31:58,462 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object62
+2016-07-28 09:31:58,462 [WARN] [AbstractOperator] - listerrr: s3container4/s3object38
+2016-07-28 09:31:58,462 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object38
+2016-07-28 09:31:58,462 [WARN] [AbstractOperator] - listerrr: s3container5/s3object41
+2016-07-28 09:31:58,462 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object41
+2016-07-28 09:31:58,462 [INFO] [NoneStorage] - performing GET at /s3container1/s3object35
+2016-07-28 09:31:58,468 [WARN] [AbstractOperator] - listerrr: s3container6/s3object13
+2016-07-28 09:31:58,468 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object13
+2016-07-28 09:31:58,469 [WARN] [AbstractOperator] - listerrr: s3container7/s3object73
+2016-07-28 09:31:58,469 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object73
+2016-07-28 09:31:58,469 [WARN] [AbstractOperator] - listerrr: s3container8/s3object33
+2016-07-28 09:31:58,469 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object33
+2016-07-28 09:31:58,469 [WARN] [AbstractOperator] - listerrr: s3container9/s3object68
+2016-07-28 09:31:58,469 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object68
+2016-07-28 09:31:58,469 [INFO] [NoneStorage] - performing GET at /s3container2/s3object48
+2016-07-28 09:31:58,494 [INFO] [NoneStorage] - performing GET at /s3container3/s3object55
+2016-07-28 09:31:58,495 [WARN] [AbstractOperator] - listerrr: s3container10/s3object3
+2016-07-28 09:31:58,495 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object3
+2016-07-28 09:31:58,495 [WARN] [AbstractOperator] - listerrr: s3container1/s3object7
+2016-07-28 09:31:58,495 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object7
+2016-07-28 09:31:58,495 [WARN] [AbstractOperator] - listerrr: s3container2/s3object20
+2016-07-28 09:31:58,495 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object20
+2016-07-28 09:31:58,495 [INFO] [NoneStorage] - performing GET at /s3container4/s3object98
+2016-07-28 09:31:58,567 [INFO] [NoneStorage] - performing GET at /s3container5/s3object7
+2016-07-28 09:31:58,569 [WARN] [AbstractOperator] - listerrr: s3container3/s3object37
+2016-07-28 09:31:58,570 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object37
+2016-07-28 09:31:58,570 [INFO] [NoneStorage] - performing GET at /s3container6/s3object4
+2016-07-28 09:31:58,572 [INFO] [NoneStorage] - performing GET at /s3container7/s3object86
+2016-07-28 09:31:58,574 [INFO] [NoneStorage] - performing GET at /s3container8/s3object69
+2016-07-28 09:31:58,657 [INFO] [NoneStorage] - performing GET at /s3container9/s3object25
+2016-07-28 09:31:58,662 [WARN] [AbstractOperator] - listerrr: s3container4/s3object36
+2016-07-28 09:31:58,662 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object36
+2016-07-28 09:31:58,663 [INFO] [NoneStorage] - performing GET at /s3container10/s3object6
+2016-07-28 09:31:58,674 [INFO] [NoneStorage] - performing GET at /s3container1/s3object8
+2016-07-28 09:31:58,688 [WARN] [AbstractOperator] - listerrr: s3container5/s3object32
+2016-07-28 09:31:58,688 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object32
+2016-07-28 09:31:58,689 [INFO] [NoneStorage] - performing GET at /s3container2/s3object100
+2016-07-28 09:31:58,695 [INFO] [NoneStorage] - performing GET at /s3container3/s3object1
+2016-07-28 09:31:58,697 [INFO] [NoneStorage] - performing GET at /s3container4/s3object94
+2016-07-28 09:31:58,759 [WARN] [AbstractOperator] - listerrr: s3container6/s3object18
+2016-07-28 09:31:58,759 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object18
+2016-07-28 09:31:58,759 [WARN] [AbstractOperator] - listerrr: s3container7/s3object80
+2016-07-28 09:31:58,759 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object80
+2016-07-28 09:31:58,759 [WARN] [AbstractOperator] - listerrr: s3container8/s3object84
+2016-07-28 09:31:58,759 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object84
+2016-07-28 09:31:58,759 [WARN] [AbstractOperator] - listerrr: s3container9/s3object11
+2016-07-28 09:31:58,759 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object11
+2016-07-28 09:31:58,760 [WARN] [AbstractOperator] - listerrr: s3container10/s3object92
+2016-07-28 09:31:58,760 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object92
+2016-07-28 09:31:58,760 [WARN] [AbstractOperator] - listerrr: s3container1/s3object89
+2016-07-28 09:31:58,760 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object89
+2016-07-28 09:31:58,760 [WARN] [AbstractOperator] - listerrr: s3container2/s3object66
+2016-07-28 09:31:58,760 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object66
+2016-07-28 09:31:58,759 [INFO] [NoneStorage] - performing GET at /s3container5/s3object29
+2016-07-28 09:31:58,760 [INFO] [NoneStorage] - performing GET at /s3container6/s3object86
+2016-07-28 09:31:58,791 [WARN] [AbstractOperator] - listerrr: s3container3/s3object22
+2016-07-28 09:31:58,792 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object22
+2016-07-28 09:31:58,792 [WARN] [AbstractOperator] - listerrr: s3container4/s3object49
+2016-07-28 09:31:58,792 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object49
+2016-07-28 09:31:58,792 [WARN] [AbstractOperator] - listerrr: s3container5/s3object38
+2016-07-28 09:31:58,792 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object38
+2016-07-28 09:31:58,792 [WARN] [AbstractOperator] - listerrr: s3container6/s3object33
+2016-07-28 09:31:58,792 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object33
+2016-07-28 09:31:58,792 [INFO] [NoneStorage] - performing GET at /s3container7/s3object56
+2016-07-28 09:31:58,794 [INFO] [NoneStorage] - performing GET at /s3container8/s3object81
+2016-07-28 09:31:58,857 [WARN] [AbstractOperator] - listerrr: s3container7/s3object79
+2016-07-28 09:31:58,857 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object79
+2016-07-28 09:31:58,857 [WARN] [AbstractOperator] - listerrr: s3container8/s3object75
+2016-07-28 09:31:58,858 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object75
+2016-07-28 09:31:58,858 [INFO] [NoneStorage] - performing GET at /s3container9/s3object3
+2016-07-28 09:31:58,862 [WARN] [AbstractOperator] - listerrr: s3container9/s3object68
+2016-07-28 09:31:58,862 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object68
+2016-07-28 09:31:58,863 [INFO] [NoneStorage] - performing GET at /s3container10/s3object96
+2016-07-28 09:31:58,865 [INFO] [NoneStorage] - performing GET at /s3container1/s3object56
+2016-07-28 09:31:58,877 [INFO] [NoneStorage] - performing GET at /s3container2/s3object16
+2016-07-28 09:31:59,070 [WARN] [AbstractOperator] - listerrr: s3container10/s3object54
+2016-07-28 09:31:59,070 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object54
+2016-07-28 09:31:59,070 [WARN] [AbstractOperator] - listerrr: s3container1/s3object81
+2016-07-28 09:31:59,070 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object81
+2016-07-28 09:31:59,070 [WARN] [AbstractOperator] - listerrr: s3container2/s3object51
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object51
+2016-07-28 09:31:59,071 [WARN] [AbstractOperator] - listerrr: s3container3/s3object39
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object39
+2016-07-28 09:31:59,071 [WARN] [AbstractOperator] - listerrr: s3container4/s3object74
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object74
+2016-07-28 09:31:59,071 [WARN] [AbstractOperator] - listerrr: s3container5/s3object20
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object20
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing GET at /s3container3/s3object85
+2016-07-28 09:31:59,071 [WARN] [AbstractOperator] - listerrr: s3container7/s3object48
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object48
+2016-07-28 09:31:59,071 [WARN] [AbstractOperator] - listerrr: s3container6/s3object24
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing GET at /s3container4/s3object32
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing GET at /s3container5/s3object73
+2016-07-28 09:31:59,071 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object24
+2016-07-28 09:31:59,072 [WARN] [AbstractOperator] - listerrr: s3container8/s3object60
+2016-07-28 09:31:59,072 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object60
+2016-07-28 09:31:59,072 [WARN] [AbstractOperator] - listerrr: s3container9/s3object94
+2016-07-28 09:31:59,072 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object94
+2016-07-28 09:31:59,072 [WARN] [AbstractOperator] - listerrr: s3container10/s3object52
+2016-07-28 09:31:59,072 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object52
+2016-07-28 09:31:59,072 [INFO] [NoneStorage] - performing GET at /s3container6/s3object54
+2016-07-28 09:31:59,092 [WARN] [AbstractOperator] - listerrr: s3container1/s3object51
+2016-07-28 09:31:59,092 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object51
+2016-07-28 09:31:59,092 [WARN] [AbstractOperator] - listerrr: s3container2/s3object81
+2016-07-28 09:31:59,093 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object81
+2016-07-28 09:31:59,093 [WARN] [AbstractOperator] - listerrr: s3container3/s3object73
+2016-07-28 09:31:59,093 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object73
+2016-07-28 09:31:59,093 [INFO] [NoneStorage] - performing GET at /s3container7/s3object82
+2016-07-28 09:31:59,093 [WARN] [AbstractOperator] - listerrr: s3container4/s3object27
+2016-07-28 09:31:59,093 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object27
+2016-07-28 09:31:59,093 [WARN] [AbstractOperator] - listerrr: s3container5/s3object8
+2016-07-28 09:31:59,093 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object8
+2016-07-28 09:31:59,093 [WARN] [AbstractOperator] - listerrr: s3container6/s3object15
+2016-07-28 09:31:59,093 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object15
+2016-07-28 09:31:59,093 [WARN] [AbstractOperator] - listerrr: s3container7/s3object75
+2016-07-28 09:31:59,094 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object75
+2016-07-28 09:31:59,094 [WARN] [AbstractOperator] - listerrr: s3container8/s3object41
+2016-07-28 09:31:59,094 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object41
+2016-07-28 09:31:59,094 [INFO] [NoneStorage] - performing GET at /s3container9/s3object53
+2016-07-28 09:31:59,093 [INFO] [NoneStorage] - performing GET at /s3container8/s3object43
+2016-07-28 09:31:59,094 [WARN] [AbstractOperator] - listerrr: s3container9/s3object28
+2016-07-28 09:31:59,094 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object28
+2016-07-28 09:31:59,094 [WARN] [AbstractOperator] - listerrr: s3container10/s3object38
+2016-07-28 09:31:59,094 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object38
+2016-07-28 09:31:59,094 [INFO] [NoneStorage] - performing GET at /s3container10/s3object67
+2016-07-28 09:31:59,095 [INFO] [NoneStorage] - performing GET at /s3container1/s3object57
+2016-07-28 09:31:59,096 [WARN] [AbstractOperator] - listerrr: s3container1/s3object84
+2016-07-28 09:31:59,096 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object84
+2016-07-28 09:31:59,096 [WARN] [AbstractOperator] - listerrr: s3container2/s3object55
+2016-07-28 09:31:59,096 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object55
+2016-07-28 09:31:59,096 [WARN] [AbstractOperator] - listerrr: s3container3/s3object92
+2016-07-28 09:31:59,096 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object92
+2016-07-28 09:31:59,096 [WARN] [AbstractOperator] - listerrr: s3container4/s3object19
+2016-07-28 09:31:59,096 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object19
+2016-07-28 09:31:59,096 [INFO] [NoneStorage] - performing GET at /s3container2/s3object40
+2016-07-28 09:31:59,292 [WARN] [AbstractOperator] - listerrr: s3container5/s3object72
+2016-07-28 09:31:59,292 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object72
+2016-07-28 09:31:59,292 [WARN] [AbstractOperator] - listerrr: s3container6/s3object49
+2016-07-28 09:31:59,292 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object49
+2016-07-28 09:31:59,292 [WARN] [AbstractOperator] - listerrr: s3container7/s3object18
+2016-07-28 09:31:59,292 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object18
+2016-07-28 09:31:59,292 [INFO] [NoneStorage] - performing GET at /s3container3/s3object93
+2016-07-28 09:31:59,294 [WARN] [AbstractOperator] - listerrr: s3container8/s3object40
+2016-07-28 09:31:59,294 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object40
+2016-07-28 09:31:59,294 [INFO] [NoneStorage] - performing GET at /s3container4/s3object24
+2016-07-28 09:31:59,296 [WARN] [AbstractOperator] - listerrr: s3container9/s3object37
+2016-07-28 09:31:59,296 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object37
+2016-07-28 09:31:59,296 [WARN] [AbstractOperator] - listerrr: s3container10/s3object36
+2016-07-28 09:31:59,296 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object36
+2016-07-28 09:31:59,296 [WARN] [AbstractOperator] - listerrr: s3container2/s3object12
+2016-07-28 09:31:59,296 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object12
+2016-07-28 09:31:59,297 [WARN] [AbstractOperator] - listerrr: s3container3/s3object82
+2016-07-28 09:31:59,297 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object82
+2016-07-28 09:31:59,297 [INFO] [NoneStorage] - performing GET at /s3container5/s3object66
+2016-07-28 09:31:59,296 [WARN] [AbstractOperator] - listerrr: s3container1/s3object72
+2016-07-28 09:31:59,297 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object72
+2016-07-28 09:31:59,297 [WARN] [AbstractOperator] - listerrr: s3container4/s3object54
+2016-07-28 09:31:59,297 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object54
+2016-07-28 09:31:59,297 [INFO] [NoneStorage] - performing GET at /s3container6/s3object10
+2016-07-28 09:31:59,305 [INFO] [NoneStorage] - performing GET at /s3container7/s3object13
+2016-07-28 09:31:59,306 [WARN] [AbstractOperator] - listerrr: s3container5/s3object99
+2016-07-28 09:31:59,307 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object99
+2016-07-28 09:31:59,307 [WARN] [AbstractOperator] - listerrr: s3container6/s3object28
+2016-07-28 09:31:59,307 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object28
+2016-07-28 09:31:59,307 [INFO] [NoneStorage] - performing GET at /s3container8/s3object31
+2016-07-28 09:31:59,312 [WARN] [AbstractOperator] - listerrr: s3container7/s3object74
+2016-07-28 09:31:59,312 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object74
+2016-07-28 09:31:59,312 [WARN] [AbstractOperator] - listerrr: s3container8/s3object72
+2016-07-28 09:31:59,312 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object72
+2016-07-28 09:31:59,313 [WARN] [AbstractOperator] - listerrr: s3container9/s3object52
+2016-07-28 09:31:59,313 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object52
+2016-07-28 09:31:59,313 [INFO] [NoneStorage] - performing GET at /s3container9/s3object11
+2016-07-28 09:31:59,314 [INFO] [NoneStorage] - performing GET at /s3container10/s3object67
+2016-07-28 09:31:59,315 [WARN] [AbstractOperator] - listerrr: s3container10/s3object34
+2016-07-28 09:31:59,315 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object34
+2016-07-28 09:31:59,315 [WARN] [AbstractOperator] - listerrr: s3container1/s3object74
+2016-07-28 09:31:59,316 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object74
+2016-07-28 09:31:59,316 [WARN] [AbstractOperator] - listerrr: s3container2/s3object88
+2016-07-28 09:31:59,316 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object88
+2016-07-28 09:31:59,316 [INFO] [NoneStorage] - performing GET at /s3container1/s3object86
+2016-07-28 09:31:59,316 [INFO] [NoneStorage] - performing GET at /s3container2/s3object83
+2016-07-28 09:31:59,487 [INFO] [NoneStorage] - performing GET at /s3container3/s3object17
+2016-07-28 09:31:59,489 [WARN] [AbstractOperator] - listerrr: s3container3/s3object48
+2016-07-28 09:31:59,489 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object48
+2016-07-28 09:31:59,490 [WARN] [AbstractOperator] - listerrr: s3container4/s3object32
+2016-07-28 09:31:59,490 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object32
+2016-07-28 09:31:59,490 [WARN] [AbstractOperator] - listerrr: s3container5/s3object59
+2016-07-28 09:31:59,490 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object59
+2016-07-28 09:31:59,490 [INFO] [NoneStorage] - performing GET at /s3container4/s3object54
+2016-07-28 09:31:59,504 [WARN] [AbstractOperator] - listerrr: s3container6/s3object67
+2016-07-28 09:31:59,505 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object67
+2016-07-28 09:31:59,505 [WARN] [AbstractOperator] - listerrr: s3container7/s3object80
+2016-07-28 09:31:59,505 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object80
+2016-07-28 09:31:59,505 [WARN] [AbstractOperator] - listerrr: s3container8/s3object39
+2016-07-28 09:31:59,505 [WARN] [AbstractOperator] - listerrr: s3container9/s3object61
+2016-07-28 09:31:59,505 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object61
+2016-07-28 09:31:59,505 [WARN] [AbstractOperator] - listerrr: s3container10/s3object58
+2016-07-28 09:31:59,505 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object58
+2016-07-28 09:31:59,505 [INFO] [NoneStorage] - performing GET at /s3container5/s3object26
+2016-07-28 09:31:59,505 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object39
+2016-07-28 09:31:59,506 [WARN] [AbstractOperator] - listerrr: s3container1/s3object16
+2016-07-28 09:31:59,506 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object16
+2016-07-28 09:31:59,506 [INFO] [NoneStorage] - performing GET at /s3container6/s3object34
+2016-07-28 09:31:59,507 [WARN] [AbstractOperator] - listerrr: s3container2/s3object61
+2016-07-28 09:31:59,507 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object61
+2016-07-28 09:31:59,507 [WARN] [AbstractOperator] - listerrr: s3container4/s3object48
+2016-07-28 09:31:59,507 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object48
+2016-07-28 09:31:59,507 [WARN] [AbstractOperator] - listerrr: s3container5/s3object81
+2016-07-28 09:31:59,507 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object81
+2016-07-28 09:31:59,507 [INFO] [NoneStorage] - performing GET at /s3container8/s3object78
+2016-07-28 09:31:59,507 [WARN] [AbstractOperator] - listerrr: s3container3/s3object89
+2016-07-28 09:31:59,508 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object89
+2016-07-28 09:31:59,508 [INFO] [NoneStorage] - performing GET at /s3container9/s3object41
+2016-07-28 09:31:59,507 [INFO] [NoneStorage] - performing GET at /s3container7/s3object5
+2016-07-28 09:31:59,509 [WARN] [AbstractOperator] - listerrr: s3container6/s3object53
+2016-07-28 09:31:59,509 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object53
+2016-07-28 09:31:59,509 [WARN] [AbstractOperator] - listerrr: s3container7/s3object20
+2016-07-28 09:31:59,509 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object20
+2016-07-28 09:31:59,509 [WARN] [AbstractOperator] - listerrr: s3container8/s3object52
+2016-07-28 09:31:59,509 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object52
+2016-07-28 09:31:59,509 [WARN] [AbstractOperator] - listerrr: s3container9/s3object11
+2016-07-28 09:31:59,509 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object11
+2016-07-28 09:31:59,510 [INFO] [NoneStorage] - performing GET at /s3container10/s3object34
+2016-07-28 09:31:59,514 [WARN] [AbstractOperator] - listerrr: s3container10/s3object24
+2016-07-28 09:31:59,514 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object24
+2016-07-28 09:31:59,514 [INFO] [NoneStorage] - performing GET at /s3container1/s3object82
+2016-07-28 09:31:59,518 [WARN] [AbstractOperator] - listerrr: s3container1/s3object71
+2016-07-28 09:31:59,518 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object71
+2016-07-28 09:31:59,518 [INFO] [NoneStorage] - performing GET at /s3container2/s3object10
+2016-07-28 09:31:59,695 [WARN] [AbstractOperator] - listerrr: s3container2/s3object2
+2016-07-28 09:31:59,696 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object2
+2016-07-28 09:31:59,696 [WARN] [AbstractOperator] - listerrr: s3container3/s3object97
+2016-07-28 09:31:59,696 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object97
+2016-07-28 09:31:59,696 [WARN] [AbstractOperator] - listerrr: s3container4/s3object78
+2016-07-28 09:31:59,696 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object78
+2016-07-28 09:31:59,696 [WARN] [AbstractOperator] - listerrr: s3container5/s3object86
+2016-07-28 09:31:59,696 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object86
+2016-07-28 09:31:59,696 [WARN] [AbstractOperator] - listerrr: s3container6/s3object5
+2016-07-28 09:31:59,696 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object5
+2016-07-28 09:31:59,696 [INFO] [NoneStorage] - performing GET at /s3container3/s3object73
+2016-07-28 09:31:59,699 [INFO] [NoneStorage] - performing GET at /s3container4/s3object10
+2016-07-28 09:31:59,708 [WARN] [AbstractOperator] - listerrr: s3container7/s3object88
+2016-07-28 09:31:59,708 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object88
+2016-07-28 09:31:59,708 [INFO] [NoneStorage] - performing GET at /s3container5/s3object90
+2016-07-28 09:31:59,708 [WARN] [AbstractOperator] - listerrr: s3container8/s3object88
+2016-07-28 09:31:59,708 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object88
+2016-07-28 09:31:59,708 [WARN] [AbstractOperator] - listerrr: s3container9/s3object97
+2016-07-28 09:31:59,708 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object97
+2016-07-28 09:31:59,709 [INFO] [NoneStorage] - performing GET at /s3container6/s3object3
+2016-07-28 09:31:59,709 [INFO] [NoneStorage] - performing GET at /s3container7/s3object90
+2016-07-28 09:31:59,712 [INFO] [NoneStorage] - performing GET at /s3container8/s3object88
+2016-07-28 09:31:59,726 [WARN] [AbstractOperator] - listerrr: s3container10/s3object22
+2016-07-28 09:31:59,726 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object22
+2016-07-28 09:31:59,726 [WARN] [AbstractOperator] - listerrr: s3container1/s3object96
+2016-07-28 09:31:59,726 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object96
+2016-07-28 09:31:59,726 [INFO] [NoneStorage] - performing GET at /s3container9/s3object33
+2016-07-28 09:31:59,730 [INFO] [NoneStorage] - performing GET at /s3container10/s3object45
+2016-07-28 09:31:59,730 [WARN] [AbstractOperator] - listerrr: s3container2/s3object12
+2016-07-28 09:31:59,730 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object12
+2016-07-28 09:31:59,730 [INFO] [NoneStorage] - performing GET at /s3container1/s3object42
+2016-07-28 09:31:59,731 [WARN] [AbstractOperator] - listerrr: s3container3/s3object85
+2016-07-28 09:31:59,731 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object85
+2016-07-28 09:31:59,732 [INFO] [NoneStorage] - performing GET at /s3container2/s3object29
+2016-07-28 09:31:59,899 [WARN] [AbstractOperator] - listerrr: s3container4/s3object89
+2016-07-28 09:31:59,899 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object89
+2016-07-28 09:31:59,899 [INFO] [NoneStorage] - performing GET at /s3container3/s3object32
+2016-07-28 09:31:59,900 [WARN] [AbstractOperator] - listerrr: s3container5/s3object11
+2016-07-28 09:31:59,900 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object11
+2016-07-28 09:31:59,900 [INFO] [NoneStorage] - performing GET at /s3container4/s3object12
+2016-07-28 09:31:59,917 [WARN] [AbstractOperator] - listerrr: s3container6/s3object66
+2016-07-28 09:31:59,918 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object66
+2016-07-28 09:31:59,918 [WARN] [AbstractOperator] - listerrr: s3container7/s3object91
+2016-07-28 09:31:59,918 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object91
+2016-07-28 09:31:59,918 [WARN] [AbstractOperator] - listerrr: s3container8/s3object78
+2016-07-28 09:31:59,918 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object78
+2016-07-28 09:31:59,918 [WARN] [AbstractOperator] - listerrr: s3container9/s3object61
+2016-07-28 09:31:59,918 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object61
+2016-07-28 09:31:59,918 [INFO] [NoneStorage] - performing GET at /s3container5/s3object36
+2016-07-28 09:31:59,921 [INFO] [NoneStorage] - performing GET at /s3container6/s3object28
+2016-07-28 09:31:59,922 [INFO] [NoneStorage] - performing GET at /s3container7/s3object90
+2016-07-28 09:31:59,923 [WARN] [AbstractOperator] - listerrr: s3container10/s3object80
+2016-07-28 09:31:59,923 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object80
+2016-07-28 09:31:59,923 [WARN] [AbstractOperator] - listerrr: s3container1/s3object100
+2016-07-28 09:31:59,923 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object100
+2016-07-28 09:31:59,923 [INFO] [NoneStorage] - performing GET at /s3container8/s3object48
+2016-07-28 09:31:59,924 [WARN] [AbstractOperator] - listerrr: s3container2/s3object37
+2016-07-28 09:31:59,924 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object37
+2016-07-28 09:31:59,924 [INFO] [NoneStorage] - performing GET at /s3container9/s3object54
+2016-07-28 09:31:59,924 [WARN] [AbstractOperator] - listerrr: s3container3/s3object62
+2016-07-28 09:31:59,924 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object62
+2016-07-28 09:31:59,924 [WARN] [AbstractOperator] - listerrr: s3container4/s3object88
+2016-07-28 09:31:59,924 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object88
+2016-07-28 09:31:59,924 [INFO] [NoneStorage] - performing GET at /s3container10/s3object23
+2016-07-28 09:31:59,947 [INFO] [NoneStorage] - performing GET at /s3container1/s3object61
+2016-07-28 09:31:59,949 [INFO] [NoneStorage] - performing GET at /s3container2/s3object51
+2016-07-28 09:32:00,107 [WARN] [AbstractOperator] - listerrr: s3container5/s3object40
+2016-07-28 09:32:00,107 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object40
+2016-07-28 09:32:00,107 [INFO] [NoneStorage] - performing GET at /s3container3/s3object51
+2016-07-28 09:32:00,117 [INFO] [NoneStorage] - performing GET at /s3container4/s3object11
+2016-07-28 09:32:00,117 [INFO] [NoneStorage] - performing GET at /s3container5/s3object12
+2016-07-28 09:32:00,119 [WARN] [AbstractOperator] - listerrr: s3container6/s3object58
+2016-07-28 09:32:00,119 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object58
+2016-07-28 09:32:00,119 [WARN] [AbstractOperator] - listerrr: s3container8/s3object18
+2016-07-28 09:32:00,119 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object18
+2016-07-28 09:32:00,119 [INFO] [NoneStorage] - performing GET at /s3container6/s3object77
+2016-07-28 09:32:00,119 [WARN] [AbstractOperator] - listerrr: s3container7/s3object55
+2016-07-28 09:32:00,119 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object55
+2016-07-28 09:32:00,119 [WARN] [AbstractOperator] - listerrr: s3container9/s3object8
+2016-07-28 09:32:00,120 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object8
+2016-07-28 09:32:00,120 [WARN] [AbstractOperator] - listerrr: s3container10/s3object38
+2016-07-28 09:32:00,120 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object38
+2016-07-28 09:32:00,120 [INFO] [NoneStorage] - performing GET at /s3container7/s3object11
+2016-07-28 09:32:00,120 [WARN] [AbstractOperator] - listerrr: s3container1/s3object96
+2016-07-28 09:32:00,120 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object96
+2016-07-28 09:32:00,120 [INFO] [NoneStorage] - performing GET at /s3container8/s3object98
+2016-07-28 09:32:00,144 [WARN] [AbstractOperator] - listerrr: s3container2/s3object52
+2016-07-28 09:32:00,144 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object52
+2016-07-28 09:32:00,144 [WARN] [AbstractOperator] - listerrr: s3container3/s3object64
+2016-07-28 09:32:00,144 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object64
+2016-07-28 09:32:00,144 [WARN] [AbstractOperator] - listerrr: s3container4/s3object59
+2016-07-28 09:32:00,144 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object59
+2016-07-28 09:32:00,144 [INFO] [NoneStorage] - performing GET at /s3container9/s3object15
+2016-07-28 09:32:00,145 [INFO] [NoneStorage] - performing GET at /s3container10/s3object10
+2016-07-28 09:32:00,148 [INFO] [NoneStorage] - performing GET at /s3container1/s3object94
+2016-07-28 09:32:00,152 [INFO] [NoneStorage] - performing GET at /s3container2/s3object11
+2016-07-28 09:32:00,307 [INFO] [NoneStorage] - performing GET at /s3container3/s3object94
+2016-07-28 09:32:00,308 [WARN] [AbstractOperator] - listerrr: s3container5/s3object97
+2016-07-28 09:32:00,308 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object97
+2016-07-28 09:32:00,308 [WARN] [AbstractOperator] - listerrr: s3container6/s3object94
+2016-07-28 09:32:00,308 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object94
+2016-07-28 09:32:00,308 [WARN] [AbstractOperator] - listerrr: s3container7/s3object17
+2016-07-28 09:32:00,308 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object17
+2016-07-28 09:32:00,309 [WARN] [AbstractOperator] - listerrr: s3container8/s3object92
+2016-07-28 09:32:00,309 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object92
+2016-07-28 09:32:00,309 [INFO] [NoneStorage] - performing GET at /s3container4/s3object54
+2016-07-28 09:32:00,320 [INFO] [NoneStorage] - performing GET at /s3container5/s3object89
+2016-07-28 09:32:00,322 [WARN] [AbstractOperator] - listerrr: s3container9/s3object1
+2016-07-28 09:32:00,322 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object1
+2016-07-28 09:32:00,322 [WARN] [AbstractOperator] - listerrr: s3container10/s3object70
+2016-07-28 09:32:00,322 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object70
+2016-07-28 09:32:00,322 [INFO] [NoneStorage] - performing GET at /s3container6/s3object45
+2016-07-28 09:32:00,328 [WARN] [AbstractOperator] - listerrr: s3container1/s3object58
+2016-07-28 09:32:00,328 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object58
+2016-07-28 09:32:00,328 [WARN] [AbstractOperator] - listerrr: s3container2/s3object94
+2016-07-28 09:32:00,328 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object94
+2016-07-28 09:32:00,328 [WARN] [AbstractOperator] - listerrr: s3container3/s3object74
+2016-07-28 09:32:00,329 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object74
+2016-07-28 09:32:00,329 [WARN] [AbstractOperator] - listerrr: s3container4/s3object46
+2016-07-28 09:32:00,329 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object46
+2016-07-28 09:32:00,329 [WARN] [AbstractOperator] - listerrr: s3container5/s3object92
+2016-07-28 09:32:00,329 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object92
+2016-07-28 09:32:00,329 [WARN] [AbstractOperator] - listerrr: s3container6/s3object76
+2016-07-28 09:32:00,329 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object76
+2016-07-28 09:32:00,329 [WARN] [AbstractOperator] - listerrr: s3container7/s3object48
+2016-07-28 09:32:00,329 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object48
+2016-07-28 09:32:00,329 [INFO] [NoneStorage] - performing GET at /s3container7/s3object78
+2016-07-28 09:32:00,335 [INFO] [NoneStorage] - performing GET at /s3container8/s3object51
+2016-07-28 09:32:00,337 [WARN] [AbstractOperator] - listerrr: s3container8/s3object71
+2016-07-28 09:32:00,337 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object71
+2016-07-28 09:32:00,337 [INFO] [NoneStorage] - performing GET at /s3container9/s3object75
+2016-07-28 09:32:00,338 [INFO] [NoneStorage] - performing GET at /s3container10/s3object46
+2016-07-28 09:32:00,360 [WARN] [AbstractOperator] - listerrr: s3container9/s3object66
+2016-07-28 09:32:00,360 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object66
+2016-07-28 09:32:00,361 [WARN] [AbstractOperator] - listerrr: s3container10/s3object22
+2016-07-28 09:32:00,361 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object22
+2016-07-28 09:32:00,361 [INFO] [NoneStorage] - performing GET at /s3container1/s3object83
+2016-07-28 09:32:00,366 [WARN] [AbstractOperator] - listerrr: s3container1/s3object45
+2016-07-28 09:32:00,366 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object45
+2016-07-28 09:32:00,366 [WARN] [AbstractOperator] - listerrr: s3container2/s3object83
+2016-07-28 09:32:00,366 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object83
+2016-07-28 09:32:00,366 [WARN] [AbstractOperator] - listerrr: s3container3/s3object36
+2016-07-28 09:32:00,366 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object36
+2016-07-28 09:32:00,366 [INFO] [NoneStorage] - performing GET at /s3container2/s3object26
+2016-07-28 09:32:00,511 [WARN] [AbstractOperator] - listerrr: s3container4/s3object20
+2016-07-28 09:32:00,511 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object20
+2016-07-28 09:32:00,511 [WARN] [AbstractOperator] - listerrr: s3container5/s3object77
+2016-07-28 09:32:00,511 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object77
+2016-07-28 09:32:00,511 [INFO] [NoneStorage] - performing GET at /s3container3/s3object16
+2016-07-28 09:32:00,514 [WARN] [AbstractOperator] - listerrr: s3container6/s3object56
+2016-07-28 09:32:00,514 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object56
+2016-07-28 09:32:00,515 [INFO] [NoneStorage] - performing GET at /s3container4/s3object33
+2016-07-28 09:32:00,533 [INFO] [NoneStorage] - performing GET at /s3container5/s3object32
+2016-07-28 09:32:00,533 [WARN] [AbstractOperator] - listerrr: s3container7/s3object2
+2016-07-28 09:32:00,533 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object2
+2016-07-28 09:32:00,533 [WARN] [AbstractOperator] - listerrr: s3container8/s3object88
+2016-07-28 09:32:00,533 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object88
+2016-07-28 09:32:00,533 [WARN] [AbstractOperator] - listerrr: s3container9/s3object11
+2016-07-28 09:32:00,533 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object11
+2016-07-28 09:32:00,533 [INFO] [NoneStorage] - performing GET at /s3container6/s3object24
+2016-07-28 09:32:00,551 [INFO] [NoneStorage] - performing GET at /s3container7/s3object29
+2016-07-28 09:32:00,559 [WARN] [AbstractOperator] - listerrr: s3container10/s3object33
+2016-07-28 09:32:00,559 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object33
+2016-07-28 09:32:00,560 [WARN] [AbstractOperator] - listerrr: s3container1/s3object23
+2016-07-28 09:32:00,560 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object23
+2016-07-28 09:32:00,560 [INFO] [NoneStorage] - performing GET at /s3container8/s3object70
+2016-07-28 09:32:00,563 [INFO] [NoneStorage] - performing GET at /s3container9/s3object67
+2016-07-28 09:32:00,564 [INFO] [NoneStorage] - performing GET at /s3container10/s3object23
+2016-07-28 09:32:00,580 [WARN] [AbstractOperator] - listerrr: s3container2/s3object96
+2016-07-28 09:32:00,581 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object96
+2016-07-28 09:32:00,581 [WARN] [AbstractOperator] - listerrr: s3container3/s3object10
+2016-07-28 09:32:00,581 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object10
+2016-07-28 09:32:00,581 [WARN] [AbstractOperator] - listerrr: s3container4/s3object22
+2016-07-28 09:32:00,581 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object22
+2016-07-28 09:32:00,581 [INFO] [NoneStorage] - performing GET at /s3container1/s3object1
+2016-07-28 09:32:00,582 [WARN] [AbstractOperator] - listerrr: s3container5/s3object58
+2016-07-28 09:32:00,582 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object58
+2016-07-28 09:32:00,583 [INFO] [NoneStorage] - performing GET at /s3container2/s3object11
+2016-07-28 09:32:00,725 [INFO] [NoneStorage] - performing GET at /s3container3/s3object42
+2016-07-28 09:32:00,727 [WARN] [AbstractOperator] - listerrr: s3container6/s3object86
+2016-07-28 09:32:00,727 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object86
+2016-07-28 09:32:00,727 [INFO] [NoneStorage] - performing GET at /s3container4/s3object7
+2016-07-28 09:32:00,737 [WARN] [AbstractOperator] - listerrr: s3container7/s3object15
+2016-07-28 09:32:00,737 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object15
+2016-07-28 09:32:00,738 [INFO] [NoneStorage] - performing GET at /s3container5/s3object30
+2016-07-28 09:32:00,738 [WARN] [AbstractOperator] - listerrr: s3container8/s3object39
+2016-07-28 09:32:00,739 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object39
+2016-07-28 09:32:00,739 [WARN] [AbstractOperator] - listerrr: s3container9/s3object41
+2016-07-28 09:32:00,739 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object41
+2016-07-28 09:32:00,739 [INFO] [NoneStorage] - performing GET at /s3container6/s3object2
+2016-07-28 09:32:00,755 [INFO] [NoneStorage] - performing GET at /s3container7/s3object98
+2016-07-28 09:32:00,757 [WARN] [AbstractOperator] - listerrr: s3container10/s3object85
+2016-07-28 09:32:00,757 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object85
+2016-07-28 09:32:00,757 [WARN] [AbstractOperator] - listerrr: s3container1/s3object19
+2016-07-28 09:32:00,757 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object19
+2016-07-28 09:32:00,757 [WARN] [AbstractOperator] - listerrr: s3container2/s3object63
+2016-07-28 09:32:00,757 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object63
+2016-07-28 09:32:00,757 [WARN] [AbstractOperator] - listerrr: s3container3/s3object5
+2016-07-28 09:32:00,757 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object5
+2016-07-28 09:32:00,758 [WARN] [AbstractOperator] - listerrr: s3container4/s3object85
+2016-07-28 09:32:00,758 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object85
+2016-07-28 09:32:00,758 [INFO] [NoneStorage] - performing GET at /s3container8/s3object95
+2016-07-28 09:32:00,759 [WARN] [AbstractOperator] - listerrr: s3container5/s3object52
+2016-07-28 09:32:00,760 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object52
+2016-07-28 09:32:00,760 [INFO] [NoneStorage] - performing GET at /s3container9/s3object65
+2016-07-28 09:32:00,760 [INFO] [NoneStorage] - performing GET at /s3container10/s3object78
+2016-07-28 09:32:00,802 [WARN] [AbstractOperator] - listerrr: s3container6/s3object44
+2016-07-28 09:32:00,802 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object44
+2016-07-28 09:32:00,802 [INFO] [NoneStorage] - performing GET at /s3container1/s3object41
+2016-07-28 09:32:00,805 [INFO] [NoneStorage] - performing GET at /s3container2/s3object38
+2016-07-28 09:32:00,915 [WARN] [AbstractOperator] - listerrr: s3container7/s3object94
+2016-07-28 09:32:00,915 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object94
+2016-07-28 09:32:00,915 [WARN] [AbstractOperator] - listerrr: s3container8/s3object66
+2016-07-28 09:32:00,915 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object66
+2016-07-28 09:32:00,915 [WARN] [AbstractOperator] - listerrr: s3container9/s3object23
+2016-07-28 09:32:00,915 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object23
+2016-07-28 09:32:00,915 [WARN] [AbstractOperator] - listerrr: s3container10/s3object94
+2016-07-28 09:32:00,915 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object94
+2016-07-28 09:32:00,915 [INFO] [NoneStorage] - performing GET at /s3container3/s3object86
+2016-07-28 09:32:00,917 [WARN] [AbstractOperator] - listerrr: s3container1/s3object45
+2016-07-28 09:32:00,917 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object45
+2016-07-28 09:32:00,917 [INFO] [NoneStorage] - performing GET at /s3container4/s3object27
+2016-07-28 09:32:00,928 [WARN] [AbstractOperator] - listerrr: s3container2/s3object73
+2016-07-28 09:32:00,928 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object73
+2016-07-28 09:32:00,928 [INFO] [NoneStorage] - performing GET at /s3container5/s3object76
+2016-07-28 09:32:00,928 [WARN] [AbstractOperator] - listerrr: s3container3/s3object56
+2016-07-28 09:32:00,928 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object56
+2016-07-28 09:32:00,928 [WARN] [AbstractOperator] - listerrr: s3container4/s3object31
+2016-07-28 09:32:00,929 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object31
+2016-07-28 09:32:00,929 [INFO] [NoneStorage] - performing GET at /s3container6/s3object50
+2016-07-28 09:32:00,953 [WARN] [AbstractOperator] - listerrr: s3container5/s3object31
+2016-07-28 09:32:00,953 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object31
+2016-07-28 09:32:00,953 [WARN] [AbstractOperator] - listerrr: s3container6/s3object70
+2016-07-28 09:32:00,953 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object70
+2016-07-28 09:32:00,953 [WARN] [AbstractOperator] - listerrr: s3container7/s3object80
+2016-07-28 09:32:00,953 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object80
+2016-07-28 09:32:00,953 [WARN] [AbstractOperator] - listerrr: s3container8/s3object92
+2016-07-28 09:32:00,953 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object92
+2016-07-28 09:32:00,953 [INFO] [NoneStorage] - performing GET at /s3container8/s3object37
+2016-07-28 09:32:00,953 [INFO] [NoneStorage] - performing GET at /s3container7/s3object12
+2016-07-28 09:32:00,955 [WARN] [AbstractOperator] - listerrr: s3container9/s3object82
+2016-07-28 09:32:00,955 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object82
+2016-07-28 09:32:00,955 [INFO] [NoneStorage] - performing GET at /s3container9/s3object77
+2016-07-28 09:32:00,958 [INFO] [NoneStorage] - performing GET at /s3container10/s3object60
+2016-07-28 09:32:01,029 [INFO] [NoneStorage] - performing GET at /s3container1/s3object25
+2016-07-28 09:32:01,030 [WARN] [AbstractOperator] - listerrr: s3container10/s3object63
+2016-07-28 09:32:01,031 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object63
+2016-07-28 09:32:01,031 [INFO] [NoneStorage] - performing GET at /s3container2/s3object29
+2016-07-28 09:32:01,129 [WARN] [AbstractOperator] - listerrr: s3container1/s3object13
+2016-07-28 09:32:01,129 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object13
+2016-07-28 09:32:01,129 [WARN] [AbstractOperator] - listerrr: s3container2/s3object47
+2016-07-28 09:32:01,129 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object47
+2016-07-28 09:32:01,129 [WARN] [AbstractOperator] - listerrr: s3container3/s3object55
+2016-07-28 09:32:01,129 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object55
+2016-07-28 09:32:01,130 [WARN] [AbstractOperator] - listerrr: s3container4/s3object33
+2016-07-28 09:32:01,130 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object33
+2016-07-28 09:32:01,130 [WARN] [AbstractOperator] - listerrr: s3container5/s3object25
+2016-07-28 09:32:01,130 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object25
+2016-07-28 09:32:01,130 [WARN] [AbstractOperator] - listerrr: s3container6/s3object46
+2016-07-28 09:32:01,130 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object46
+2016-07-28 09:32:01,130 [WARN] [AbstractOperator] - listerrr: s3container7/s3object85
+2016-07-28 09:32:01,130 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object85
+2016-07-28 09:32:01,130 [INFO] [NoneStorage] - performing GET at /s3container4/s3object21
+2016-07-28 09:32:01,129 [INFO] [NoneStorage] - performing GET at /s3container3/s3object100
+2016-07-28 09:32:01,149 [INFO] [NoneStorage] - performing GET at /s3container5/s3object4
+2016-07-28 09:32:01,150 [INFO] [NoneStorage] - performing GET at /s3container6/s3object9
+2016-07-28 09:32:01,170 [WARN] [AbstractOperator] - listerrr: s3container8/s3object70
+2016-07-28 09:32:01,170 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object70
+2016-07-28 09:32:01,170 [WARN] [AbstractOperator] - listerrr: s3container9/s3object62
+2016-07-28 09:32:01,170 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object62
+2016-07-28 09:32:01,170 [WARN] [AbstractOperator] - listerrr: s3container10/s3object23
+2016-07-28 09:32:01,170 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object23
+2016-07-28 09:32:01,170 [INFO] [NoneStorage] - performing GET at /s3container7/s3object35
+2016-07-28 09:32:01,173 [INFO] [NoneStorage] - performing GET at /s3container8/s3object58
+2016-07-28 09:32:01,176 [WARN] [AbstractOperator] - listerrr: s3container1/s3object89
+2016-07-28 09:32:01,176 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object89
+2016-07-28 09:32:01,176 [WARN] [AbstractOperator] - listerrr: s3container2/s3object12
+2016-07-28 09:32:01,176 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object12
+2016-07-28 09:32:01,176 [INFO] [NoneStorage] - performing GET at /s3container10/s3object72
+2016-07-28 09:32:01,176 [INFO] [NoneStorage] - performing GET at /s3container9/s3object18
+2016-07-28 09:32:01,220 [WARN] [AbstractOperator] - listerrr: s3container3/s3object72
+2016-07-28 09:32:01,220 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object72
+2016-07-28 09:32:01,220 [INFO] [NoneStorage] - performing GET at /s3container1/s3object2
+2016-07-28 09:32:01,223 [WARN] [AbstractOperator] - listerrr: s3container4/s3object27
+2016-07-28 09:32:01,223 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object27
+2016-07-28 09:32:01,223 [WARN] [AbstractOperator] - listerrr: s3container5/s3object65
+2016-07-28 09:32:01,223 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object65
+2016-07-28 09:32:01,223 [WARN] [AbstractOperator] - listerrr: s3container6/s3object77
+2016-07-28 09:32:01,223 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object77
+2016-07-28 09:32:01,223 [WARN] [AbstractOperator] - listerrr: s3container7/s3object82
+2016-07-28 09:32:01,224 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object82
+2016-07-28 09:32:01,224 [INFO] [NoneStorage] - performing GET at /s3container2/s3object13
+2016-07-28 09:32:01,364 [WARN] [AbstractOperator] - listerrr: s3container8/s3object38
+2016-07-28 09:32:01,364 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object38
+2016-07-28 09:32:01,364 [WARN] [AbstractOperator] - listerrr: s3container9/s3object9
+2016-07-28 09:32:01,364 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object9
+2016-07-28 09:32:01,364 [WARN] [AbstractOperator] - listerrr: s3container10/s3object27
+2016-07-28 09:32:01,364 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object27
+2016-07-28 09:32:01,364 [WARN] [AbstractOperator] - listerrr: s3container1/s3object6
+2016-07-28 09:32:01,364 [INFO] [NoneStorage] - performing GET at /s3container3/s3object31
+2016-07-28 09:32:01,364 [INFO] [NoneStorage] - performing LIST at /s3container1/s3object6
+2016-07-28 09:32:01,365 [WARN] [AbstractOperator] - listerrr: s3container2/s3object70
+2016-07-28 09:32:01,365 [INFO] [NoneStorage] - performing LIST at /s3container2/s3object70
+2016-07-28 09:32:01,365 [WARN] [AbstractOperator] - listerrr: s3container3/s3object1
+2016-07-28 09:32:01,365 [INFO] [NoneStorage] - performing LIST at /s3container3/s3object1
+2016-07-28 09:32:01,365 [WARN] [AbstractOperator] - listerrr: s3container4/s3object85
+2016-07-28 09:32:01,365 [INFO] [NoneStorage] - performing LIST at /s3container4/s3object85
+2016-07-28 09:32:01,365 [INFO] [NoneStorage] - performing GET at /s3container4/s3object10
+2016-07-28 09:32:01,366 [INFO] [NoneStorage] - performing GET at /s3container5/s3object46
+2016-07-28 09:32:01,366 [WARN] [AbstractOperator] - listerrr: s3container5/s3object59
+2016-07-28 09:32:01,366 [INFO] [NoneStorage] - performing LIST at /s3container5/s3object59
+2016-07-28 09:32:01,366 [WARN] [AbstractOperator] - listerrr: s3container6/s3object80
+2016-07-28 09:32:01,366 [INFO] [NoneStorage] - performing LIST at /s3container6/s3object80
+2016-07-28 09:32:01,366 [WARN] [AbstractOperator] - listerrr: s3container7/s3object56
+2016-07-28 09:32:01,366 [INFO] [NoneStorage] - performing LIST at /s3container7/s3object56
+2016-07-28 09:32:01,367 [INFO] [NoneStorage] - performing GET at /s3container6/s3object33
+2016-07-28 09:32:01,367 [INFO] [NoneStorage] - performing GET at /s3container7/s3object99
+2016-07-28 09:32:01,411 [WARN] [AbstractOperator] - listerrr: s3container8/s3object24
+2016-07-28 09:32:01,411 [INFO] [NoneStorage] - performing LIST at /s3container8/s3object24
+2016-07-28 09:32:01,411 [WARN] [AbstractOperator] - listerrr: s3container9/s3object94
+2016-07-28 09:32:01,411 [INFO] [NoneStorage] - performing LIST at /s3container9/s3object94
+2016-07-28 09:32:01,411 [INFO] [NoneStorage] - performing GET at /s3container8/s3object4
+2016-07-28 09:32:01,414 [WARN] [AbstractOperator] - listerrr: s3container10/s3object45
+2016-07-28 09:32:01,414 [INFO] [NoneStorage] - performing LIST at /s3container10/s3object45
+2016-07-28 09:32:01,414 [INFO] [NoneStorage] - performing GET at /s3container9/s3object97
+2016-07-28 09:32:01,417 [INFO] [NoneStorage] - performing GET at /s3container10/s3object87
+2016-07-28 09:33:15,610 [ERROR] [AbstractOperator] - worker 4 fail to perform operation s3container6/s3object33
+com.intel.cosbench.api.storage.StorageException: com.amazonaws.AmazonClientException: Unable to execute HTTP request: null
+	at com.intel.cosbench.api.S3Stor.S3Storage.getObject(S3Storage.java:98)
+	at com.intel.cosbench.driver.operator.Reader.doRead(Reader.java:89)
+	at com.intel.cosbench.driver.operator.Reader.operate(Reader.java:69)
+	at com.intel.cosbench.driver.operator.AbstractOperator.operate(AbstractOperator.java:76)
+	at com.intel.cosbench.driver.agent.WorkAgent.performOperation(WorkAgent.java:197)
+	at com.intel.cosbench.driver.agent.WorkAgent.doWork(WorkAgent.java:177)
+	at com.intel.cosbench.driver.agent.WorkAgent.execute(WorkAgent.java:134)
+	at com.intel.cosbench.driver.agent.AbstractAgent.call(AbstractAgent.java:44)
+	at com.intel.cosbench.driver.agent.AbstractAgent.call(AbstractAgent.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.amazonaws.AmazonClientException: Unable to execute HTTP request: null
+	at com.amazonaws.http.AmazonHttpClient.executeHelper(AmazonHttpClient.java:354)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:190)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:2974)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:911)
+	at com.amazonaws.services.s3.AmazonS3Client.getObject(AmazonS3Client.java:801)
+	at com.intel.cosbench.api.S3Stor.S3Storage.getObject(S3Storage.java:94)
+	... 12 more
+Caused by: java.io.InterruptedIOException
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:393)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:732)
+	at com.amazonaws.http.AmazonHttpClient.executeHelper(AmazonHttpClient.java:306)
+	... 17 more
+Caused by: java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitUntil(AbstractQueuedSynchronizer.java:2129)
+	at org.apache.http.impl.conn.tsccm.WaitingThread.await(WaitingThread.java:156)
+	at org.apache.http.impl.conn.tsccm.ConnPoolByRoute.getEntryBlocking(ConnPoolByRoute.java:403)
+	at org.apache.http.impl.conn.tsccm.ConnPoolByRoute$1.getPoolEntry(ConnPoolByRoute.java:300)
+	at org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager$1.getConnection(ThreadSafeClientConnManager.java:224)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:391)
+	... 21 more

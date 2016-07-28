@@ -1,0 +1,165 @@
+# 7/28/16 9:20:17 AM CDT
+# Eclipse Compiler for Java(TM) v20160516-2131, 3.12.0, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 32)
+	import com.intel.cosbench.api.context.AuthContext;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.api.context cannot be resolved
+----------
+2. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 33)
+	import com.intel.cosbench.api.storage.NoneStorage;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.api.storage cannot be resolved
+----------
+3. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 34)
+	import com.intel.cosbench.api.storage.StorageException;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.api.storage cannot be resolved
+----------
+4. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 35)
+	import com.intel.cosbench.config.Config;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.config cannot be resolved
+----------
+5. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 36)
+	import com.intel.cosbench.log.Logger;
+	       ^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.log cannot be resolved
+----------
+6. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 47)
+	public class LibradosStorage extends NoneStorage {
+	                                     ^^^^^^^^^^^
+NoneStorage cannot be resolved to a type
+----------
+7. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 55)
+	public void init(Config config, Logger logger) {
+	                 ^^^^^^
+Config cannot be resolved to a type
+----------
+8. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 55)
+	public void init(Config config, Logger logger) {
+	                                ^^^^^^
+Logger cannot be resolved to a type
+----------
+9. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 62)
+	parms.put(ENDPOINT_KEY, endpoint);
+	^^^^^
+parms cannot be resolved
+----------
+10. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 63)
+	parms.put(AUTH_USERNAME_KEY, accessKey);
+	^^^^^
+parms cannot be resolved
+----------
+11. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 64)
+	parms.put(AUTH_PASSWORD_KEY, secretKey);
+	^^^^^
+parms cannot be resolved
+----------
+12. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 65)
+	logger.debug("using storage config: {}", parms);
+	                                         ^^^^^
+parms cannot be resolved to a variable
+----------
+13. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 75)
+	throw new StorageException(e);
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+14. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 80)
+	public void setAuthContext(AuthContext info) {
+	                           ^^^^^^^^^^^
+AuthContext cannot be resolved to a type
+----------
+15. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 85)
+	super.dispose();
+	^^^^^
+NoneStorage cannot be resolved to a type
+----------
+16. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 89)
+	public InputStream getObject(String container, String object, Config config) {
+	                                                              ^^^^^^
+Config cannot be resolved to a type
+----------
+17. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 97)
+	throw new StorageException("Object larger than 2GB, handling not implemented");
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+18. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 105)
+	throw new StorageException(e);
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+19. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 111)
+	public void createContainer(String container, Config config) {
+	                                              ^^^^^^
+Config cannot be resolved to a type
+----------
+20. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 124)
+	throw new StorageException(e);
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+21. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 128)
+	public void deleteContainer(String container, Config config) {
+	                                              ^^^^^^
+Config cannot be resolved to a type
+----------
+22. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 133)
+	throw new StorageException(e);
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+23. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 137)
+	public void createObject(String container, String object, InputStream data, long length, Config config) {
+	                                                                                         ^^^^^^
+Config cannot be resolved to a type
+----------
+24. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 145)
+	throw new StorageException(e);
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+25. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 147)
+	throw new StorageException(e);
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+26. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 151)
+	public void deleteObject(String container, String object, Config config) {
+	                                                          ^^^^^^
+Config cannot be resolved to a type
+----------
+27. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorage.java (at line 158)
+	throw new StorageException(e);
+	          ^^^^^^^^^^^^^^^^
+StorageException cannot be resolved to a type
+----------
+----------
+28. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorageFactory.java (at line 17)
+	import com.intel.cosbench.api.storage.*;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.api.storage cannot be resolved
+----------
+29. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorageFactory.java (at line 25)
+	public class LibradosStorageFactory implements StorageAPIFactory {
+	                                               ^^^^^^^^^^^^^^^^^
+StorageAPIFactory cannot be resolved to a type
+----------
+30. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorageFactory.java (at line 28)
+	public String getStorageName() {
+	              ^^^^^^^^^^^^^^^^
+The method getStorageName() of type LibradosStorageFactory must override or implement a supertype method
+----------
+31. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorageFactory.java (at line 33)
+	public StorageAPI getStorageAPI() {
+	       ^^^^^^^^^^
+StorageAPI cannot be resolved to a type
+----------
+32. ERROR in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-librados/src/com/intel/cosbench/api/librados/LibradosStorageFactory.java (at line 33)
+	public StorageAPI getStorageAPI() {
+	                  ^^^^^^^^^^^^^^^
+The method getStorageAPI() of type LibradosStorageFactory must override or implement a supertype method
+----------
+32 problems (32 errors)

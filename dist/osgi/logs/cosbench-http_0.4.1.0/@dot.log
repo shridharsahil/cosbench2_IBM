@@ -1,0 +1,39 @@
+# 7/28/16 9:20:17 AM CDT
+# Eclipse Compiler for Java(TM) v20160516-2131, 3.12.0, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-http/src/com/intel/cosbench/client/http/HttpClientUtil.java (at line 20)
+	import java.io.IOException;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.io.IOException is never used
+----------
+2. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-http/src/com/intel/cosbench/client/http/HttpClientUtil.java (at line 29)
+	import org.apache.http.HttpException;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.apache.http.HttpException is never used
+----------
+3. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-http/src/com/intel/cosbench/client/http/HttpClientUtil.java (at line 30)
+	import org.apache.http.HttpResponse;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.apache.http.HttpResponse is never used
+----------
+4. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-http/src/com/intel/cosbench/client/http/HttpClientUtil.java (at line 31)
+	import org.apache.http.HttpResponseInterceptor;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.apache.http.HttpResponseInterceptor is never used
+----------
+5. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-http/src/com/intel/cosbench/client/http/HttpClientUtil.java (at line 32)
+	import org.apache.http.HttpStatus;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.apache.http.HttpStatus is never used
+----------
+6. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-http/src/com/intel/cosbench/client/http/HttpClientUtil.java (at line 50)
+	import org.apache.http.protocol.HttpContext;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.apache.http.protocol.HttpContext is never used
+----------
+7. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-http/src/com/intel/cosbench/client/http/HttpClientUtil.java (at line 51)
+	import org.omg.CORBA.PUBLIC_MEMBER;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import org.omg.CORBA.PUBLIC_MEMBER is never used
+----------
+7 problems (7 warnings)

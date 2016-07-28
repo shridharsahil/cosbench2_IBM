@@ -1,0 +1,9 @@
+# 7/28/16 9:20:18 AM CDT
+# Eclipse Compiler for Java(TM) v20160516-2131, 3.12.0, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-core/src/com/intel/cosbench/bench/ErrorStatistics.java (at line 23)
+	import javax.lang.model.element.Element;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import javax.lang.model.element.Element is never used
+----------
+1 problem (1 warning)

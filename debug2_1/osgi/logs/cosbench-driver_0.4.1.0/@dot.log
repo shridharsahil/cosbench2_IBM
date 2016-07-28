@@ -1,0 +1,36 @@
+# 7/28/16 9:20:20 AM CDT
+# Eclipse Compiler for Java(TM) v20160516-2131, 3.12.0, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-driver/src/com/intel/cosbench/driver/agent/AuthAgent.java (at line 76)
+	AuthAPI authApi = workerContext.getAuthApi();
+	        ^^^^^^^
+The value of the local variable authApi is not used
+----------
+----------
+2. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-driver/src/com/intel/cosbench/driver/agent/WorkAgent.java (at line 26)
+	import javax.naming.AuthenticationException;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import javax.naming.AuthenticationException is never used
+----------
+3. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-driver/src/com/intel/cosbench/driver/agent/WorkAgent.java (at line 28)
+	import com.intel.cosbench.api.auth.AuthBadException;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import com.intel.cosbench.api.auth.AuthBadException is never used
+----------
+4. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-driver/src/com/intel/cosbench/driver/agent/WorkAgent.java (at line 62)
+	private boolean has_histo; /* collect response time histogram data or not */
+	                ^^^^^^^^^
+The value of the field WorkAgent.has_histo is not used
+----------
+----------
+5. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-driver/src/com/intel/cosbench/driver/operator/Cleaner.java (at line 24)
+	import java.util.ArrayList;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.util.ArrayList is never used
+----------
+6. WARNING in /Users/sahilshridhar/Documents/cosbench_2/dev/cosbench-driver/src/com/intel/cosbench/driver/operator/Cleaner.java (at line 26)
+	import java.util.List;
+	       ^^^^^^^^^^^^^^
+The import java.util.List is never used
+----------
+6 problems (6 warnings)

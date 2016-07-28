@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workload name="s3_read_write" description="s3 api against swift cluster">
+
+<storage type="s3" config="accesskey=a67ae629ab7942c08c92cafd0156a01c;secretkey=0deec1565ee1495599cab4af4a206d8a;endpoint=http://169.57.120.254:8080" />
+
+<workflow>
+
+<workstage name="main">
+<work name="main" workers="10" runtime="20">
+<operation type="list" ratio="60" config="cprefix=s3container;oprefix=s3object;containers=r(1,10);objects=u(1,100)" /> 
+<operation type="read" ratio="40" config="cprefix=s3container;oprefix=s3object;containers=r(1,10);objects=u(1,100)" />
+</work>
+</workstage>
+
+</workflow>
+
+</workload>
